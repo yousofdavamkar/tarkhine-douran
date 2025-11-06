@@ -1,6 +1,42 @@
 :root {
-    --font-family-base: "Estedad", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+   --font-family-base: "Estedad", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+	/* Primary palette */
+	--color-primary: #417F56;
+	--color-primary-tint-1: #E5F2E9;
+	--color-primary-tint-2: #CAE4D3;
+	--color-primary-tint-3: #B0D7BD;
+	--color-primary-tint-4: #96C9A7;
+	--color-primary-tint-5: #7CBC91;
+	--color-primary-tint-6: #61AE7B;
+	--color-primary-tint-7: #4E9968;
+	--color-primary-shade-1: #396F4B;
+	--color-primary-shade-2: #315F41;
+	--color-primary-shade-3: #294F36;
+	--color-primary-shade-4: #21402B;
+	--color-primary-shade-5: #183020;
+	--color-primary-shade-6: #102016;
+	--color-primary-shade-7: #08100B;
+
+	/* Neutral palette */
+	--color-neutral-white: #FFFFFF;
+	--color-neutral-gray-1: #F9F9F9;
+	--color-neutral-gray-2: #E1E1E1;
+	--color-neutral-gray-3: #EDEDED;
+	--color-neutral-gray-4: #CBCBCB;
+	--color-neutral-gray-5: #ADADAD;
+	--color-neutral-gray-6: #757575;
+	--color-neutral-gray-7: #717171;
+	--color-neutral-gray-8: #353535;
+	--color-neutral-black: #0C0C0C;
+
+	/* Status palette */
+	--color-status-success: #00966D;
+	--color-status-success-light: #00BA88;
+	--color-status-success-extra-light: #F3FDFA;
+	--color-status-error: #C30000;
+	--color-status-error-light: #ED2E2E;
+	--color-status-error-extra-light: #FFF2F2;
+	--color-status-warning: #A9791C;
+	--color-status-warning-light: #F4B740;
+	--color-status-warning-extra-light: #FFF8E1;
 }
-
-
-
