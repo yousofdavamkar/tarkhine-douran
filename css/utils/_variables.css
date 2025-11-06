@@ -1,4 +1,5 @@
 :root {
+   --font-family-base: "Estedad", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
 	/* Primary palette */
 	--color-primary: #417F56;
 	--color-primary-tint-1: #E5F2E9;
