@@ -1,16 +1,24 @@
 :root {
-    /* Spacing scale derived from Figma (increments of 8px) */
-    --spacing-8: 8px;
-    --spacing-16: 16px;
-    --spacing-24: 24px;
-    --spacing-32: 32px;
-    --spacing-40: 40px;
-    --spacing-48: 48px;
-    --spacing-56: 56px;
-    --spacing-64: 64px;
-    --spacing-80: 80px;
-    --spacing-120: 120px;
-    --spacing-160: 160px;
+	/* Spacing scale derived from Figma (increments of 8px) */
+	--spacing-8: 8px;
+	--spacing-16: 16px;
+	--spacing-24: 24px;
+	--spacing-32: 32px;
+	--spacing-40: 40px;
+	--spacing-48: 48px;
+	--spacing-56: 56px;
+	--spacing-64: 64px;
+	--spacing-80: 80px;
+	--spacing-120: 120px;
+	--spacing-160: 160px;
+
+	/* Corner radius scale derived from Figma */
+	--radius-4: 4px;
+	--radius-8: 8px;
+	--radius-16: 16px;
+	--radius-24: 24px;
+	--radius-32: 32px;
+	--radius-64: 64px;
 
    --font-family-base: "Estedad", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
 	/* Primary palette */
