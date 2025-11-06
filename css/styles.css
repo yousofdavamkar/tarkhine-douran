@@ -1,5 +1,6 @@
 /* Utility styles */
-@import url('/utils/_variables.css');
+
+@import url('/css/utils/_variables.css');
 
 /* Base styles */
 @import url('/base/_reset.css');
