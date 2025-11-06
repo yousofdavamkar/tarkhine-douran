@@ -60,4 +60,13 @@
 	--color-status-warning: #A9791C;
 	--color-status-warning-light: #F4B740;
 	--color-status-warning-extra-light: #FFF8E1;
+
+	/* Shadow scale derived from Figma */
+	--shadow-drop-2: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+	--shadow-drop-4: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+	--shadow-drop-6: 0px 6px 6px 0px rgba(0, 0, 0, 0.25);
+	--shadow-drop-8: 0px 8px 8px 0px rgba(0, 0, 0, 0.25);
+	--shadow-drop-16: 0px 16px 16px 0px rgba(0, 0, 0, 0.25);
+	--shadow-card: 0px 0px 0px 0px rgba(0, 0, 0, 0.1), 0px 1px 2px 0px rgba(0, 0, 0, 0.1), 0px 4px 4px 0px rgba(0, 0, 0, 0.09), 0px 9px 5px 0px rgba(0, 0, 0, 0.05), 0px 16px 6px 0px rgba(0, 0, 0, 0.01), 0px 25px 7px 0px rgba(0, 0, 0, 0);
+	--shadow-contact-card: 0px 0px 0px 0px rgba(0, 0, 0, 0.1), 0px 3px 6px 0px rgba(0, 0, 0, 0.1), 0px 11px 11px 0px rgba(0, 0, 0, 0.09), 0px 24px 14px 0px rgba(0, 0, 0, 0.05), 0px 42px 17px 0px rgba(0, 0, 0, 0.01), 0px 66px 18px 0px rgba(0, 0, 0, 0);
 }
