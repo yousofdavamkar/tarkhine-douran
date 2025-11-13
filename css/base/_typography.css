@@ -110,3 +110,9 @@ h6{
     line-height: 1.8;
     font-weight: 400;
 }
+
+.caption-lg{
+    font-size: 1.4rem;
+    line-height: 1.8;
+    font-weight: 500;
+}
