@@ -104,3 +104,9 @@ h5{
 h6{
     font-size: 1.6rem;
 }
+
+.body-xl{
+    font-size: 2rem;
+    line-height: 1.8;
+    font-weight: 400;
+}
