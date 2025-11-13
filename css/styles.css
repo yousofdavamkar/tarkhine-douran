@@ -18,3 +18,7 @@
 @import url('/css/layout/_form.css');
 @import url('/css/layout/_header.css');
 @import url('/css/layout/_grid.css');
+
+
+/* Page styles */
+@import url('/css/pages/_home.css');
