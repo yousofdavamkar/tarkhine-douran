@@ -23,6 +23,9 @@
       href="/favicon/favicon-16x16.png"
     />
     <link rel="manifest" href="/favicon/site.webmanifest" />
+    <!-- swiper -->
+    <link rel="stylesheet" href="/node_modules/swiper/swiper-bundle.min.css" />
+    <!-- styles -->
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
@@ -161,5 +164,53 @@
         </div>
       </div>
     </header>
+    <main>
+      <section class="slider">
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <h2 class="slider__title">تجربه غذای سالم و گیاهی به سبک ترخینه</h2>
+                <a href="#" class="silder__link btn btn--fill-primary btn--size-40">سفارش غذا</a>
+            </div>
+            <div class="swiper-slide">
+                <h2 class="slider__title">تجربه غذای سالم و گیاهی به سبک ترخینه</h2>
+                <a href="#" class="silder__link btn btn--fill-primary btn--size-40">سفارش غذا</a>
+            </div>
+            <div class="swiper-slide">
+                <h2 class="slider__title">تجربه غذای سالم و گیاهی به سبک ترخینه</h2>
+                <a href="#" class="silder__link btn btn--fill-primary btn--size-40">سفارش غذا</a>
+            </div>
+            <div class="swiper-slide">
+                <h2 class="slider__title">تجربه غذای سالم و گیاهی به سبک ترخینه</h2>
+                <a href="#" class="silder__link btn btn--fill-primary btn--size-40">سفارش غذا</a>
+            </div>  
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+    </main>
+    <!-- scripts -->
+    <script src="/node_modules/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 0,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
   </body>
 </html>
