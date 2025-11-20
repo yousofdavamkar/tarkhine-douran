@@ -11,21 +11,10 @@
   border-radius: var(--radius-4);
 }
 
+/* Fill Styles */
 .btn--fill-primary {
   background-color: var(--color-primary);
   color: var(--color-neutral-white);
-}
-
-.btn--stroke-primary {
-  background-color: transparent;
-  color: var(--color-primary);
-  border-color: var(--color-primary);
-}
-
-.btn--empty-primary {
-  background-color: transparent;
-  color: var(--color-primary);
-  border-color: transparent;
 }
 
 .btn--fill-white {
@@ -33,29 +22,57 @@
   color: var(--color-primary);
 }
 
-.btn--stroke-white {
-  background-color: transparent;
-  color: var(--color-neutral-white);
-  border-color: var(--color-neutral-white);
-}
-.btn--empty-white {
-  background-color: transparent;
-  color: var(--color-neutral-white);
-  border-color: transparent;
-}
-
 .btn--fill-black {
   background-color: var(--color-neutral-gray-7);
   color: var(--color-neutral-white);
 }
-.btn--stroke-black {
+
+/* Shared Transparent Backgrounds */
+.btn--stroke-primary,
+.btn--empty-primary,
+.btn--stroke-white,
+.btn--empty-white,
+.btn--stroke-black,
+.btn--empty-black,
+.btn--stroke-neutral-7 {
   background-color: transparent;
+}
+
+/* Text Colors */
+.btn--stroke-primary,
+.btn--empty-primary {
+  color: var(--color-primary);
+}
+
+.btn--stroke-white,
+.btn--empty-white,
+.btn--stroke-neutral-7 {
+  color: var(--color-neutral-white);
+}
+
+.btn--stroke-black,
+.btn--empty-black {
   color: var(--color-neutral-gray-7);
+}
+
+/* Border Colors */
+.btn--stroke-primary {
+  border-color: var(--color-primary);
+}
+
+.btn--stroke-white {
+  border-color: var(--color-neutral-white);
+}
+
+.btn--stroke-black,
+.btn--stroke-neutral-7 {
   border-color: var(--color-neutral-gray-7);
 }
+
+/* Empty buttons inherit transparent border from .btn */
+.btn--empty-primary,
+.btn--empty-white,
 .btn--empty-black {
-  background-color: transparent;
-  color: var(--color-neutral-gray-7);
   border-color: transparent;
 }
 
