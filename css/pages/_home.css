@@ -34,6 +34,11 @@
   }
 }
 
+.about__icon{
+  width: 24px;
+  height: 24px;
+}
+
 .about__features {
   flex: 2;
   display: flex;
@@ -53,4 +58,11 @@
     justify-content: center;
     align-items: center;
     gap: var(--spacing-16);
+}
+
+
+.about__feaure__icon{
+  width: 48px;
+  height: 48px;
+  fill: white;
 }
