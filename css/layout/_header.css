@@ -55,3 +55,10 @@
   justify-content: center;
   border-radius: var(--radius-4);
 }
+
+
+.site-header__icon{
+  width: 24px;
+  height: 24px;
+  fill: var(--color-primary);
+}
