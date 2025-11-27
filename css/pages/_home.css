@@ -1,3 +1,83 @@
+.menu {
+  padding: 48px 0 72px;
+}
+
+.menu__title {
+  text-align: center;
+}
+
+.menu__list {
+  margin-top: 152px;
+  display: flex;
+  justify-content: center;
+}
+
+.menu__item {
+  flex: 1;
+  height: 160px;
+  transition: all 300ms ease;
+  padding: 0 12px;
+}
+
+.menu__container {
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  box-shadow: var(--shadow-card);
+  border-radius: var(--radius-8);
+  height: 100%;
+  position: relative;
+}
+.menu__item-image{
+    width: 240px;
+    position: absolute;
+    bottom: 40px;
+    left: calc(50% - (240px / 2));
+}
+
+.menu__item-link.btn{
+    width: 156px;
+    position: absolute;
+    bottom: -24px;
+    left: calc(50% - (156px / 2));
+    background-color: var(--color-neutral-gray-1);
+    color: var(--color-neutral-gray-8);
+    box-shadow: var(--shadow-card);
+
+}
+.menu__item:hover {
+  opacity: 1;
+}
+
+.menu__list:hover .menu__item:not(:hover) {
+  opacity: 0.8;
+}
+
+.menu__item:first-of-type {
+  padding-inline-start: 0;
+}
+
+.menu__item:last-of-type {
+  padding-inline-end: 0;
+}
+
+@supports not (padding-inline-start: 0) {
+  html[dir="rtl"] .menu__item:first-of-type {
+    padding-right: 0;
+  }
+
+  html[dir="rtl"] .menu__item:last-of-type {
+    padding-left: 0;
+  }
+
+  .menu__item:first-of-type {
+    padding-left: 0;
+  }
+
+  .menu__item:last-of-type {
+    padding-right: 0;
+  }
+}
+
 .about {
   background: #464031 url("/images/about.jpg") no-repeat top center / cover;
   padding: var(--spacing-48) 0;
