@@ -1,6 +1,5 @@
 .menu {
   padding: 48px 0 72px;
-  background-color: deeppink;
 }
 
 .menu__title {
@@ -25,8 +24,26 @@
   border: 1px solid var(--color-primary);
   box-shadow: var(--shadow-card);
   border-radius: var(--radius-8);
+  height: 100%;
+  position: relative;
+}
+.menu__item-image{
+    width: 240px;
+    position: absolute;
+    bottom: 40px;
+    left: calc(50% - (240px / 2));
 }
 
+.menu__item-link.btn{
+    width: 156px;
+    position: absolute;
+    bottom: -24px;
+    left: calc(50% - (156px / 2));
+    background-color: var(--color-neutral-gray-1);
+    color: var(--color-neutral-gray-8);
+    box-shadow: var(--shadow-card);
+
+}
 .menu__item:hover {
   opacity: 1;
 }
@@ -60,6 +77,7 @@
     padding-right: 0;
   }
 }
+
 .about {
   background: #464031 url("/images/about.jpg") no-repeat top center / cover;
   padding: var(--spacing-48) 0;
@@ -103,16 +121,16 @@
   gap: var(--spacing-8);
 }
 
-.about__features-row{
-    height: 136px;
-    display: flex;
-    gap: var(--spacing-24);
+.about__features-row {
+  height: 136px;
+  display: flex;
+  gap: var(--spacing-24);
 }
-.about__feature{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: var(--spacing-16);
+.about__feature {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-16);
 }
