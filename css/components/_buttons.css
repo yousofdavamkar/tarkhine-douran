@@ -1,9 +1,9 @@
 .btn,
 .btn:link,
 .btn:visited {
+  width: fit-content;
   border: 1px solid transparent;
   display: flex;
-  width: fit-content;
   align-items: center;
   gap: 4px;
   padding: 0 var(--spacing-8);
@@ -19,7 +19,7 @@
   color: var(--color-neutral-white);
 }
 
-.btn--fill-primary:link,
+.btn--fill-prim.btnary:link,
 .btn--fill-primary:visited {
   background-color: var(--color-primary);
   color: var(--color-neutral-white);
@@ -213,22 +213,22 @@
   color: var(--color-neutral-black);
 }
 
-.btn--size-40,
-.btn--size-48,
-.btn--size-56 {
+.btn.btn--size-40,
+.btn.btn--size-48,
+.btn.btn--size-56 {
   gap: var(--spacing-8);
   padding: 0 var(--spacing-16);
   font-size: 1.6rem;
 }
 
-.btn--size-40 {
+.btn.btn--size-40 {
   height: 40px;
 }
 
-.btn--size-48 {
+.btn.btn--size-48 {
   height: 48px;
 }
 
-.btn--size-56 {
+.btn.btn--size-56 {
   height: 56px;
 }
