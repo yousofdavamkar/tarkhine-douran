@@ -13,12 +13,16 @@
 @import url('/css/components/_product-card.css');
 @import url('/css/components/_slider.css');
 @import url('/css/components/_tabs.css');
+@import url('/css/components/_inputs.css');
+@import url('/css/components/_buttons.css');
+@import url('/css/components/_slider.css');
 /* Layout styles */
 @import url('/css/layout/_footer.css');
 @import url('/css/layout/_form.css');
 @import url('/css/layout/_header.css');
 @import url('/css/layout/_grid.css');
 
-
-/* Page styles */
+/* Page-specific styles */
 @import url('/css/pages/_home.css');
+/* Vendor styles */
+@import url('/css/vendor/_swiper.css');
