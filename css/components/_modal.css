@@ -44,8 +44,9 @@
 .modal__close-btn {
   cursor: pointer;
   position: absolute;
-  top: 24px;
   left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .modal__body {
@@ -80,5 +81,6 @@
   height: 24px;
   position: absolute;
   left: 16px;
-  top: 8px;
+  top: 50%;
+  transform: translateY(-50%);
 }
