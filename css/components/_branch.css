@@ -11,6 +11,13 @@
     border-radius:var(--radius-8) var(--radius-8) 0 0;
 }
 
+.branch__image img{
+    width: 100%;
+}
+
+.branch__info{
+    padding: var(--spacing-8);
+}
 
 .branch__name{
     display: block;
