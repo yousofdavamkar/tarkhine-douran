@@ -12,7 +12,7 @@
   gap: var(--spacing-24);
 }
 .menu {
-  padding: 48px 0 72px;
+  padding: var(--spacing-48) 0 72px;
 }
 
 .menu__title {
@@ -27,7 +27,7 @@
 
 .menu__item {
   flex: 1;
-  height: 160px;
+  height: var(--spacing-160);
   transition: all 300ms ease;
   padding: 0 12px;
 }
@@ -43,14 +43,14 @@
 .menu__item-image {
   width: 240px;
   position: absolute;
-  bottom: 40px;
+  bottom: var(--spacing-40);
   left: calc(50% - (240px / 2));
 }
 
 .menu__item-link.btn {
   width: 156px;
   position: absolute;
-  bottom: -24px;
+  bottom: calc(var(--spacing-24) * -1);
   left: calc(50% - (156px / 2));
   background-color: var(--color-neutral-gray-1);
   color: var(--color-neutral-gray-8);

@@ -72,3 +72,14 @@ button {
   border: none;
   cursor: pointer;
 }
+
+
+::selection{
+  background-color: var(--color-primary);
+  color: var(--color-neutral-white);
+}
+
+
+input[type="checkbox"]{
+  accent-color: var(--color-primary);
+}
