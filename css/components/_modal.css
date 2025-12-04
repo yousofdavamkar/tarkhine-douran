@@ -13,6 +13,13 @@
   visibility: hidden;
   pointer-events: none;
   transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(6px);
+}
+
+@supports not (backdrop-filter: blur()) {
+  .modal__backdrop {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
 }
 
 .modal {
