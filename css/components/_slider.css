@@ -12,3 +12,10 @@
   padding: 0 32px;
   margin: 40px auto 0;
 }
+
+
+.slider__icon{
+  width: 32px !important;
+  height: 32px !important;
+  fill: var(--color-neutral-white) !important;
+}
