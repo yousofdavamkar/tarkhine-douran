@@ -4,7 +4,7 @@
   position: relative;
 }
 
-.footer::before{
+.footer::before {
   content: "";
   position: absolute;
   top: 0;
@@ -85,8 +85,6 @@
   padding-inline-start: 16px;
 }
 
-
-
 .footer__textarea {
   width: 286px;
   height: 144px;
@@ -101,6 +99,7 @@
 }
 
 .footer__submit {
+  width: 184px;
   height: 40px;
   padding: 0 62px;
   font-size: 14px;

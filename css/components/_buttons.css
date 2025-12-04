@@ -107,6 +107,7 @@
 .btn--empty-white,
 .btn--stroke-neutral-7 {
   color: var(--color-neutral-white);
+  border:1px solid var(--color-neutral-gray-7);
 }
 
 .btn--stroke-white:link,
