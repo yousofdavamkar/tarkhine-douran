@@ -1,12 +1,25 @@
 .footer {
   background: #222b1e url("/images/Footer.jpg") no-repeat center top / cover;
   box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.footer::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 0;
 }
 
 .footer .container {
   padding: 32px 0 34px;
   display: flex;
   gap: 128px;
+  position: relative;
 }
 
 .footer__title {
