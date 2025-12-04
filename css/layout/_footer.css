@@ -16,7 +16,7 @@
 }
 
 .footer .container {
-  padding: 32px 0 34px;
+  padding: var(--spacing-32) 0 34px;
   display: flex;
   gap: 128px;
   position: relative;
@@ -27,7 +27,7 @@
 }
 
 .footer__nav {
-  margin-top: 16px;
+  margin-top: var(--spacing-16);
   color: var(--color-neutral-gray-3);
   padding-inline-start: 12px;
 }
@@ -45,7 +45,7 @@
 .footer__nav-list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: var(--spacing-16);
 }
 
 .footer__socials-list {
@@ -54,7 +54,7 @@
 }
 
 .footer__form {
-  margin-top: 16px;
+  margin-top: var(--spacing-16);
 }
 
 .footer__form-content {
@@ -81,14 +81,24 @@
 
 .footer__input {
   width: 276px;
-  height: 40px;
-  padding-inline-start: 16px;
+  height: var(--spacing-40);
+  padding-inline-start: var(--spacing-16);
+}
+
+@supports not (padding-inline-start: 16px) {
+  html[dir="rtl"] .footer__input {
+    padding-right: var(--spacing-16);
+  }
+
+  .footer__input {
+    padding-left: var(--spacing-16);
+  }
 }
 
 .footer__textarea {
   width: 286px;
   height: 144px;
-  padding: 16px;
+  padding: var(--spacing-16);
   resize: none;
 }
 

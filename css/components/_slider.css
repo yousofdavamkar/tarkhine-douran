@@ -9,13 +9,12 @@
 }
 
 .silder__link {
-  padding: 0 32px;
-  margin: 40px auto 0;
+  padding: 0 var(--spacing-32);
+  margin: var(--spacing-40) auto 0;
 }
 
-
-.slider__icon{
-  width: 32px !important;
-  height: 32px !important;
+.slider__icon {
+  width: var(--spacing-32) !important;
+  height: var(--spacing-32) !important;
   fill: var(--color-neutral-white) !important;
 }

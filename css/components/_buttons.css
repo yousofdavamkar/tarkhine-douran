@@ -7,7 +7,7 @@
   align-items: center;
   gap: 4px;
   padding: 0 var(--spacing-8);
-  height: 32px;
+  height: var(--spacing-32);
   justify-content: center;
   font-size: 1.2rem;
   border-radius: var(--radius-4);
@@ -20,7 +20,7 @@
   color: var(--color-neutral-white);
 }
 
-.btn--fill-prim.btnary:link,
+.btn--fill-primary:link,
 .btn--fill-primary:visited {
   background-color: var(--color-primary);
   color: var(--color-neutral-white);
@@ -107,7 +107,7 @@
 .btn--empty-white,
 .btn--stroke-neutral-7 {
   color: var(--color-neutral-white);
-  border:1px solid var(--color-neutral-gray-7);
+  border: 1px solid var(--color-neutral-gray-7);
 }
 
 .btn--stroke-white:link,
