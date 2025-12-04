@@ -14,6 +14,7 @@
   transition: all 0.3s linear;
 }
 
+/* Fill Styles */
 .btn--fill-primary {
   background-color: var(--color-primary);
   color: var(--color-neutral-white);
@@ -39,7 +40,6 @@
 .btn--stroke-primary {
   background-color: transparent;
   color: var(--color-primary);
-  border-color: var(--color-primary);
 }
 
 .btn--stroke-primary:link,
@@ -63,8 +63,6 @@
 
 .btn--empty-primary {
   background-color: transparent;
-  color: var(--color-primary);
-  border-color: transparent;
 }
 
 .btn--empty-primary:link,
@@ -105,10 +103,10 @@
   color: var(--color-primary);
 }
 
-.btn--stroke-white {
-  background-color: transparent;
+.btn--stroke-white,
+.btn--empty-white,
+.btn--stroke-neutral-7 {
   color: var(--color-neutral-white);
-  border-color: var(--color-neutral-white);
 }
 
 .btn--stroke-white:link,
@@ -194,8 +192,6 @@
 }
 
 .btn--empty-black {
-  background-color: transparent;
-  color: var(--color-neutral-gray-7);
   border-color: transparent;
 }
 
