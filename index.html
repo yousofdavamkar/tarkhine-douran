@@ -30,6 +30,8 @@
   </head>
   <body>
     <!-- header -->
+    <input type="radio" name="search" id="open-search" />
+    <input type="radio" name="search" id="close-search" />
     <header class="site-header">
       <div class="container">
         <div class="site-header__brand">
@@ -61,6 +63,24 @@
                   />
                 </svg>
               </a>
+              <div class="site-header__dropdown">
+                <nav class="site-header__dropdown-nav">
+                  <ul class="site-header__dropdown-list">
+                    <li class="site-header__dropdown-item body-sm">
+                      <a class="site-header__dropdown-link" href="">اکباتان</a>
+                    </li>
+                    <li class="site-header__dropdown-item body-sm">
+                      <a class="site-header__dropdown-link" href="">اکباتان</a>
+                    </li>
+                    <li class="site-header__dropdown-item body-sm">
+                      <a class="site-header__dropdown-link" href="">اکباتان</a>
+                    </li>
+                    <li class="site-header__dropdown-item body-sm">
+                      <a class="site-header__dropdown-link" href="">اکباتان</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
             </li>
             <li class="site-header__nav-item">
               <a
@@ -83,6 +103,32 @@
                   />
                 </svg>
               </a>
+              <div class="site-header__dropdown">
+                <nav class="site-header__dropdown-nav">
+                  <ul class="site-header__dropdown-list">
+                    <li class="site-header__dropdown-item body-sm">
+                      <a class="site-header__dropdown-link" href=""
+                        >غذای اصلی</a
+                      >
+                    </li>
+                    <li class="site-header__dropdown-item body-sm">
+                      <a class="site-header__dropdown-link" href=""
+                        >غذای اصلی</a
+                      >
+                    </li>
+                    <li class="site-header__dropdown-item body-sm">
+                      <a class="site-header__dropdown-link" href=""
+                        >غذای اصلی</a
+                      >
+                    </li>
+                    <li class="site-header__dropdown-item body-sm">
+                      <a class="site-header__dropdown-link" href=""
+                        >غذای اصلی</a
+                      >
+                    </li>
+                  </ul>
+                </nav>
+              </div>
             </li>
             <li class="site-header__nav-item">
               <a class="site-header__nav-link" href="">اعطای نمایندگی</a>
@@ -96,13 +142,13 @@
           </ul>
         </nav>
         <div class="site-header__actions">
-          <button class="site-header__btn">
+          <label for="open-search" class="site-header__btn">
             <svg class="site-header__icon">
               <use
                 xlink:href="/icons/sprite.svg#iconsax-search-vaym754o-"
               ></use>
             </svg>
-          </button>
+          </label>
           <button class="site-header__btn">
             <svg class="site-header__icon">
               <use
@@ -114,10 +160,82 @@
             <svg class="site-header__icon">
               <use xlink:href="/icons/sprite.svg#iconsax-user-blmc2wgt-"></use>
             </svg>
+            <div class="site-header__dropdown">
+              <nav class="site-header__dropdown-nav">
+                <ul class="site-header__dropdown-list">
+                  <li class="site-header__dropdown-item body-sm">
+                    <a class="site-header__dropdown-link" href="">غذای اصلی</a>
+                  </li>
+                  <li class="site-header__dropdown-item body-sm">
+                    <a class="site-header__dropdown-link" href="">غذای اصلی</a>
+                  </li>
+                  <li class="site-header__dropdown-item body-sm">
+                    <a class="site-header__dropdown-link" href="">غذای اصلی</a>
+                  </li>
+                  <li class="site-header__dropdown-item body-sm">
+                    <a class="site-header__dropdown-link" href="">غذای اصلی</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
           </button>
         </div>
       </div>
     </header>
+    <dialog></dialog>
+    <!-- modal -->
+    <div class="modal__backdrop">
+      <div class="modal">
+        <div class="modal__header">
+          <span class="modal__title">جستجو</span>
+          <label class="modal__close-btn" for="close-search">
+            <svg
+              class="modal__close-icon"
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                width="3.72611"
+                height="29.8089"
+                rx="1.86305"
+                transform="matrix(0.698447 -0.715662 0.698447 0.715662 8.45508 11.667)"
+                fill="#717171"
+              />
+              <rect
+                width="3.72611"
+                height="29.8089"
+                rx="1.86305"
+                transform="matrix(0.698447 0.715662 -0.698447 0.715662 28.6973 9.00049)"
+                fill="#717171"
+              />
+            </svg>
+          </label>
+        </div>
+        <div class="modal__body">
+          <p class="modal__description body-md">
+            لطفا متن خود را تایپ و سپس دکمه Enter را بزنید.
+          </p>
+          <form class="modal__form" action="#" method="get">
+            <label class="modal__input-group">
+              <input
+                class="modal__input input input-size-40 input-inactive"
+                type="text"
+                name="search"
+                placeholder="جستجو"
+              />
+              <svg class="modal__search-icon">
+                <use
+                  xlink:href="/icons/sprite.svg#iconsax-search-vaym754o-"
+                ></use>
+              </svg>
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
     <!-- main -->
     <main>
       <section class="slider">
