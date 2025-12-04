@@ -113,9 +113,14 @@ h6 {
   font-size: 1.6rem;
 }
 
-
 .body-sm {
   font-size: 1.4rem;
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+.body-md {
+  font-size: 1.6rem;
   line-height: 1.8;
   font-weight: 400;
 }
@@ -125,13 +130,13 @@ h6 {
   font-weight: 500;
   line-height: 1.8;
 }
-.body-lg{
-    font-size: 1.8rem;
-    line-height: 1.8;
+.body-lg {
+  font-size: 1.8rem;
+  line-height: 1.8;
 }
 
-.body-xl{
-    font-size: 2rem;
-    line-height: 1.8;
-    font-weight: 400;
+.body-xl {
+  font-size: 2rem;
+  line-height: 1.8;
+  font-weight: 400;
 }

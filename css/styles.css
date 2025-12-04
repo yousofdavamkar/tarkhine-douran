@@ -16,6 +16,8 @@
 @import url('/css/components/_inputs.css');
 @import url('/css/components/_buttons.css');
 @import url('/css/components/_slider.css');
+@import url('/css/components/_dropdown.css');
+@import url('/css/components/_modal.css');
 /* Layout styles */
 @import url('/css/layout/_footer.css');
 @import url('/css/layout/_form.css');
