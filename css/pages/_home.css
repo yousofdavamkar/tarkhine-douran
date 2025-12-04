@@ -1,3 +1,15 @@
+.branches{
+    padding: var(--spacing-48) 0;
+}
+
+.branches__title{
+    color: var(--color-neutral-gray-8);
+    text-align: center;
+}
+.branches__list{
+    display: flex;
+    margin-top: var(--spacing-24);
+    gap: var(--spacing-24);
 .menu {
   padding: 48px 0 72px;
 }
