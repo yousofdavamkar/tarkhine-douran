@@ -5,7 +5,6 @@
   border-radius: var(--radius-4);
   padding-inline-start: 16px;
   padding-inline-end: 16px;
-  background-color: var(--color-neutral-white);
   color: var(--color-neutral-gray-8);
   font-family: inherit;
   outline: none;
@@ -41,7 +40,7 @@
 
 /* Hover */
 .input:hover:not(:disabled):not(.input-disabled):not(.input-error) {
-  border-color: var(--color-neutral-gray-8);
+  border-color: var(--color-neutral-gray-3);
 }
 
 /* Focus */
@@ -75,7 +74,6 @@
 .input-inactive {
   border-color: var(--color-neutral-gray-4);
   color: var(--color-neutral-gray-4);
-  background-color: var(--color-neutral-gray-1);
 }
 
 .input:disabled::placeholder,
