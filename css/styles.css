@@ -7,6 +7,7 @@
 @import url('/css/base/_typography.css');
 
 /* Component styles */
+
 @import url('/css/components/_branch.css');
 @import url('/css/components/_card-buttons.css');
 @import url('/css/components/_login.css');
@@ -18,6 +19,8 @@
 @import url('/css/components/_slider.css');
 @import url('/css/components/_dropdown.css');
 @import url('/css/components/_modal.css');
+@import url('/css/components/-shoppingcart.css');
+@import url('/css/components/-stare.css');
 /* Layout styles */
 @import url('/css/layout/_footer.css');
 @import url('/css/layout/_form.css');
