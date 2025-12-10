@@ -1,0 +1,87 @@
+:root {
+  /* Spacing scale derived from Figma (increments of 8px) */
+  --spacing-8: 8px;
+  --spacing-16: 16px;
+  --spacing-24: 24px;
+  --spacing-32: 32px;
+  --spacing-40: 40px;
+  --spacing-48: 48px;
+  --spacing-56: 56px;
+  --spacing-64: 64px;
+  --spacing-80: 80px;
+  --spacing-120: 120px;
+  --spacing-160: 160px;
+
+  /* Corner radius scale derived from Figma */
+  --radius-4: 4px;
+  --radius-8: 8px;
+  --radius-16: 16px;
+  --radius-24: 24px;
+  --radius-32: 32px;
+  --radius-64: 64px;
+
+  --font-family-base: "Estedad", "Segoe UI", system-ui, -apple-system,
+    "Helvetica Neue", Arial, sans-serif;
+  /* Primary palette */
+  --color-primary: #417f56;
+  --color-primary-tint-1: #e5f2e9;
+  --color-primary-tint-2: #cae4d3;
+  --color-primary-tint-3: #b0d7bd;
+  --color-primary-tint-4: #96c9a7;
+  --color-primary-tint-5: #7cbc91;
+  --color-primary-tint-6: #61ae7b;
+  --color-primary-tint-7: #4e9968;
+  --color-primary-shade-1: #396f4b;
+  --color-primary-shade-2: #315f41;
+  --color-primary-shade-3: #294f36;
+  --color-primary-shade-4: #21402b;
+  --color-primary-shade-5: #183020;
+  --color-primary-shade-6: #102016;
+  --color-primary-shade-7: #08100b;
+
+  /* Neutral palette */
+  --color-neutral-white: #ffffff;
+  --color-neutral-gray-1: #f9f9f9;
+  --color-neutral-gray-2: #e1e1e1;
+  --color-neutral-gray-3: #ededed;
+  --color-neutral-gray-4: #cbcbcb;
+  --color-neutral-gray-5: #adadad;
+  --color-neutral-gray-6: #757575;
+  --color-neutral-gray-7: #717171;
+  --color-neutral-gray-8: #353535;
+  --color-neutral-black: #0c0c0c;
+
+  /* Status palette */
+  --color-status-success: #00966d;
+  --color-status-success-light: #00ba88;
+  --color-status-success-extra-light: #f3fdfa;
+  --color-status-error: #c30000;
+  --color-status-error-light: #ed2e2e;
+  --color-status-error-extra-light: #fff2f2;
+  --color-status-warning: #a9791c;
+  --color-status-warning-light: #f4b740;
+  --color-status-warning-extra-light: #fff8e1;
+
+  /* Shadow scale derived from Figma */
+  --shadow-drop-2: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+  --shadow-drop-4: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  --shadow-drop-6: 0px 6px 6px 0px rgba(0, 0, 0, 0.25);
+  --shadow-drop-8: 0px 8px 8px 0px rgba(0, 0, 0, 0.25);
+  --shadow-drop-16: 0px 16px 16px 0px rgba(0, 0, 0, 0.25);
+  --shadow-card: 0px 0px 0px 0px rgba(0, 0, 0, 0.1),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.1), 0px 4px 4px 0px rgba(0, 0, 0, 0.09),
+    0px 9px 5px 0px rgba(0, 0, 0, 0.05), 0px 16px 6px 0px rgba(0, 0, 0, 0.01),
+    0px 25px 7px 0px rgba(0, 0, 0, 0);
+  --shadow-contact-card: 0px 0px 0px 0px rgba(0, 0, 0, 0.1),
+    0px 3px 6px 0px rgba(0, 0, 0, 0.1), 0px 11px 11px 0px rgba(0, 0, 0, 0.09),
+    0px 24px 14px 0px rgba(0, 0, 0, 0.05), 0px 42px 17px 0px rgba(0, 0, 0, 0.01),
+    0px 66px 18px 0px rgba(0, 0, 0, 0);
+
+  /* Padding scale (mapped to spacing tokens from Figma)
+	   Use these variables for component padding and layout gutters.
+	*/
+  --padding-xs: var(--spacing-8);
+  --padding-sm: var(--spacing-16);
+  --padding-md: var(--spacing-24);
+  --padding-lg: var(--spacing-32);
+}

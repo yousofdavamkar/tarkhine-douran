@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <title>رستوران های زنجیره ای ترخینه</title>
+    <!-- favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    <!-- swiper -->
+    <link rel="stylesheet" href="/node_modules/swiper/swiper-bundle.min.css" />
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="shopping-cart">
+      <div class="shopping-cart__item">
+        <img
+          src="./images/Food Picture.png"
+          alt="product"
+          class="shopping-cart__image"
+        />
+        <div class="shopping-cart__content">
+          <div class="shopping-cart__title"><h4>پاستا سبزیجات</h4></div>
+
+          <div class="shopping-cart__recipe">
+            پاستا، قارچ، گوجه، کدوی خوردشده، پیاز خلالی‌شده
+          </div>
+
+          <div class="shopping-cart__actions">
+            <button class="shopping-cart__btn--decrease">
+              <svg class="">
+                <use xlink:href="/icons/sprite.svg#-"></use>
+              </svg>
+            </button>
+            <span class="shopping-cart__namber">1</span>
+            <button class="shopping-cart__btn--increase">
+              <svg class="">
+                <use xlink:href="/icons/sprite.svg#+"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="star Rate">
+            <svg class="star_notactive">
+              <use xlink:href="/icons/sprite.svg#Star_halo"></use>
+            </svg>
+            <svg class="star_notactive">
+              <use xlink:href="/icons/sprite.svg#Star_halo"></use>
+            </svg>
+            <svg class="star_notactive">
+              <use xlink:href="/icons/sprite.svg#Star_halo"></use></svg
+            ><svg class="star_notactive">
+              <use xlink:href="/icons/sprite.svg#Star_halo"></use>
+            </svg>
+            <svg class="star_notactive">
+              <use xlink:href="/icons/sprite.svg#Star_halo"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="shopping-cart__price">
+          <span class="shopping-cart__price-discount"></span>
+          <span class="shopping-cart__price-quantity"></span>
+          <span class="shopping-cart__price-value"></span>
+        </div>
+        <button class="tras">
+          <svg class="">
+            <use xlink:href="/icons/sprite.svg#Heart"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
