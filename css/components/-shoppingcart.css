@@ -1,9 +1,9 @@
 .shopping-cart {
   position: relative;
   display: flex;
-background: #FFFFFF;
-border: 1px solid #CBCBCB;
-border-radius: 8px;
+  background: var(--color-neutral-white);
+  border: 1px solid var(--color-neutral-gray-4);
+  border-radius: var(--radius-8);
   width: 65.6rem;
   height: 15.8rem;
   align-self: center;
@@ -44,7 +44,7 @@ height: 25px;
 font-size: 14px;
 line-height: 180%;
 text-align:center;
-color: #417F56;
+color: var(--color-primary);
 }
 .shopping-cart__actions {
   position: absolute;
@@ -53,18 +53,18 @@ color: #417F56;
   width: 5.5rem;
   height: 3.2rem;
   left: 261px;
-  border-radius: 4px;
-  border: 1px solid;
+  border-radius: var(--radius-4);
+  border: 1px solid var(--color-primary-tint-1);
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 0px 4px;
-  gap: 8px;
+  padding: 0 var(--spacing-8);
+  gap: var(--spacing-8);
   top: 108px;
-  background: #e5f2e9;
-  border: 1px solid #e5f2e9;
-  border-radius: 4px;
+  background: var(--color-primary-tint-1);
+  border: 1px solid var(--color-primary-tint-1);
+  border-radius: var(--radius-4);
 }
 .shopping-cart__quantity {
   width: 0.9rem;
@@ -73,11 +73,88 @@ color: #417F56;
 
 .tras{
 position: absolute;
-width: 24px;
-height: 24px;
+width: var(--spacing-24);
+height: var(--spacing-24);
 left: 32px;
 top: 22px;
 }
 
-/* Style=Normal */
 
+
+
+.discount_cntinr{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  gap: var(--spacing-8);
+
+  position: absolute;
+  width: 103px;
+  height: 29px;
+  left: 32px;
+  top: 73px;
+
+
+
+}
+.shopping-cart__price-value{
+
+width: 53px;
+height: 29px;
+font-style: normal;
+font-size: 16px;
+line-height: 180%;
+
+text-align: right;
+text-decoration-line: line-through;
+text-transform: capitalize;
+
+
+  color: var(--color-neutral-gray-5);
+
+
+
+flex: none;
+order: 1;
+flex-grow: 0;
+
+}
+
+
+.shopping-cart__price-quantity{
+width: var(--spacing-32);
+height: 19px;
+background: var(--color-status-error-extra-light);
+border-radius: var(--radius-8);
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 180%;
+text-align: center;
+color: var(--color-status-error);
+
+
+}
+.mony{
+display: flex;
+flex-direction: row;
+align-items: center;
+
+width: 109px;
+height: 36px;
+
+font-size: 20px;
+color: var(--color-neutral-gray-8);
+gap: var(--spacing-8);
+
+position: absolute;
+width: 109px;
+height: 36px;
+left: 32px;
+top: 106px;
+
+
+
+}
+        
