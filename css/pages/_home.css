@@ -177,7 +177,7 @@
   fill: white;
 }
 
-/* lg */
+/* xl */
 @media screen and (max-width: 80em) {
   .menu__list {
     margin-top: 100px;
@@ -189,7 +189,32 @@
     gap: 100px;
   }
 
-  .about__feature-text{
+  .about__feature-text {
     text-align: center;
+  }
+}
+
+/* lg */
+
+@media screen and (max-width: 64em) {
+  .menu__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    row-gap: 160px;
+  }
+  .menu__item {
+    padding: 0 12px !important;
+  }
+  .menu__item-image {
+    width: 240px;
+  }
+  .about .container {
+    gap: 50px;
+  }
+  .branches__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
   }
 }

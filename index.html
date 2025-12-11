@@ -32,115 +32,194 @@
     <!-- header -->
     <input type="radio" name="search" id="open-search" />
     <input type="radio" name="search" id="close-search" />
+    <input type="radio" name="menu" id="open-menu" />
+    <input type="radio" name="menu" id="close-menu" />
     <header class="site-header">
       <div class="container">
+        <label for="open-menu" class="site-header__menu-btn">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_3154_26169)">
+              <path
+                d="M21 7.75H3C2.59 7.75 2.25 7.41 2.25 7C2.25 6.59 2.59 6.25 3 6.25H21C21.41 6.25 21.75 6.59 21.75 7C21.75 7.41 21.41 7.75 21 7.75Z"
+                fill="#417F56"
+              />
+              <path
+                d="M21 12.75H3C2.59 12.75 2.25 12.41 2.25 12C2.25 11.59 2.59 11.25 3 11.25H21C21.41 11.25 21.75 11.59 21.75 12C21.75 12.41 21.41 12.75 21 12.75Z"
+                fill="#417F56"
+              />
+              <path
+                d="M21 17.75H3C2.59 17.75 2.25 17.41 2.25 17C2.25 16.59 2.59 16.25 3 16.25H21C21.41 16.25 21.75 16.59 21.75 17C21.75 17.41 21.41 17.75 21 17.75Z"
+                fill="#417F56"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_3154_26169">
+                <rect width="24" height="24" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </label>
         <div class="site-header__brand">
           <img class="site-header__logo" src="/images/Logo.png" alt="logo" />
         </div>
-        <nav class="site-header__nav">
-          <ul class="site-header__nav-list body-xl">
-            <li class="site-header__nav-item site-header__nav-item--active">
-              <a class="site-header__nav-link" href="">صفحه اصلی</a>
-            </li>
-            <li class="site-header__nav-item">
-              <a
-                class="site-header__nav-link site-header__nav-link--has-dropdown"
-                href=""
-              >
-                شعبه
-
-                <svg
-                  class="site-header__nav-caret"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M7.99904 11.1999C7.53237 11.1999 7.0657 11.0199 6.71237 10.6666L2.3657 6.31993C2.17237 6.12659 2.17237 5.8066 2.3657 5.61326C2.55904 5.41993 2.87904 5.41993 3.07237 5.61326L7.41904 9.95993C7.73904 10.2799 8.25904 10.2799 8.57904 9.95993L12.9257 5.61326C13.119 5.41993 13.439 5.41993 13.6324 5.61326C13.8257 5.8066 13.8257 6.12659 13.6324 6.31993L9.2857 10.6666C8.93237 11.0199 8.4657 11.1999 7.99904 11.1999Z"
-                    fill="#717171"
-                  />
-                </svg>
-              </a>
-              <div class="site-header__dropdown">
-                <nav class="site-header__dropdown-nav">
-                  <ul class="site-header__dropdown-list">
-                    <li class="site-header__dropdown-item body-sm">
-                      <a class="site-header__dropdown-link" href="">اکباتان</a>
-                    </li>
-                    <li class="site-header__dropdown-item body-sm">
-                      <a class="site-header__dropdown-link" href="">اکباتان</a>
-                    </li>
-                    <li class="site-header__dropdown-item body-sm">
-                      <a class="site-header__dropdown-link" href="">اکباتان</a>
-                    </li>
-                    <li class="site-header__dropdown-item body-sm">
-                      <a class="site-header__dropdown-link" href="">اکباتان</a>
-                    </li>
-                  </ul>
-                </nav>
+        <div class="site-header__menu">
+          <nav class="site-header__nav">
+            <div class="site-header__mobile">
+              <div class="site-header__mobile-brand">
+                <img
+                  class="site-header__mobile-logo"
+                  src="/images/Logo-white.png"
+                  alt="logo"
+                />
+                <label class="site-header__mobile-toggle" for="close-menu">
+                  <svg
+                    class="site-header__mobile-icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      x="5.31348"
+                      y="7.41406"
+                      width="2"
+                      height="16"
+                      rx="1"
+                      transform="rotate(-45 5.31348 7.41406)"
+                      fill="white"
+                    />
+                    <rect
+                      x="16.3135"
+                      y="6"
+                      width="2"
+                      height="16"
+                      rx="1"
+                      transform="rotate(45 16.3135 6)"
+                      fill="white"
+                    />
+                  </svg>
+                </label>
               </div>
-            </li>
-            <li class="site-header__nav-item">
-              <a
-                class="site-header__nav-link site-header__nav-link--has-dropdown"
-                href=""
-              >
-                منو
-
-                <svg
-                  class="site-header__nav-caret"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+            </div>
+            <ul class="site-header__nav-list body-xl">
+              <li class="site-header__nav-item site-header__nav-item--active">
+                <a class="site-header__nav-link" href="">صفحه اصلی</a>
+              </li>
+              <li class="site-header__nav-item">
+                <a
+                  class="site-header__nav-link site-header__nav-link--has-dropdown"
+                  href=""
                 >
-                  <path
-                    d="M7.99904 11.1999C7.53237 11.1999 7.0657 11.0199 6.71237 10.6666L2.3657 6.31993C2.17237 6.12659 2.17237 5.8066 2.3657 5.61326C2.55904 5.41993 2.87904 5.41993 3.07237 5.61326L7.41904 9.95993C7.73904 10.2799 8.25904 10.2799 8.57904 9.95993L12.9257 5.61326C13.119 5.41993 13.439 5.41993 13.6324 5.61326C13.8257 5.8066 13.8257 6.12659 13.6324 6.31993L9.2857 10.6666C8.93237 11.0199 8.4657 11.1999 7.99904 11.1999Z"
-                    fill="#717171"
-                  />
-                </svg>
-              </a>
-              <div class="site-header__dropdown">
-                <nav class="site-header__dropdown-nav">
-                  <ul class="site-header__dropdown-list">
-                    <li class="site-header__dropdown-item body-sm">
-                      <a class="site-header__dropdown-link" href=""
-                        >غذای اصلی</a
-                      >
-                    </li>
-                    <li class="site-header__dropdown-item body-sm">
-                      <a class="site-header__dropdown-link" href=""
-                        >غذای اصلی</a
-                      >
-                    </li>
-                    <li class="site-header__dropdown-item body-sm">
-                      <a class="site-header__dropdown-link" href=""
-                        >غذای اصلی</a
-                      >
-                    </li>
-                    <li class="site-header__dropdown-item body-sm">
-                      <a class="site-header__dropdown-link" href=""
-                        >غذای اصلی</a
-                      >
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-            </li>
-            <li class="site-header__nav-item">
-              <a class="site-header__nav-link" href="">اعطای نمایندگی</a>
-            </li>
-            <li class="site-header__nav-item">
-              <a class="site-header__nav-link" href="">درباره ما</a>
-            </li>
-            <li class="site-header__nav-item">
-              <a class="site-header__nav-link" href="">تماس با ما</a>
-            </li>
-          </ul>
-        </nav>
+                  شعبه
+
+                  <svg
+                    class="site-header__nav-caret"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.99904 11.1999C7.53237 11.1999 7.0657 11.0199 6.71237 10.6666L2.3657 6.31993C2.17237 6.12659 2.17237 5.8066 2.3657 5.61326C2.55904 5.41993 2.87904 5.41993 3.07237 5.61326L7.41904 9.95993C7.73904 10.2799 8.25904 10.2799 8.57904 9.95993L12.9257 5.61326C13.119 5.41993 13.439 5.41993 13.6324 5.61326C13.8257 5.8066 13.8257 6.12659 13.6324 6.31993L9.2857 10.6666C8.93237 11.0199 8.4657 11.1999 7.99904 11.1999Z"
+                      fill="#717171"
+                    />
+                  </svg>
+                </a>
+                <div class="site-header__dropdown">
+                  <nav class="site-header__dropdown-nav">
+                    <ul class="site-header__dropdown-list">
+                      <li class="site-header__dropdown-item body-sm">
+                        <a class="site-header__dropdown-link" href=""
+                          >اکباتان</a
+                        >
+                      </li>
+                      <li class="site-header__dropdown-item body-sm">
+                        <a class="site-header__dropdown-link" href=""
+                          >اکباتان</a
+                        >
+                      </li>
+                      <li class="site-header__dropdown-item body-sm">
+                        <a class="site-header__dropdown-link" href=""
+                          >اکباتان</a
+                        >
+                      </li>
+                      <li class="site-header__dropdown-item body-sm">
+                        <a class="site-header__dropdown-link" href=""
+                          >اکباتان</a
+                        >
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </li>
+              <li class="site-header__nav-item">
+                <a
+                  class="site-header__nav-link site-header__nav-link--has-dropdown"
+                  href=""
+                >
+                  منو
+
+                  <svg
+                    class="site-header__nav-caret"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.99904 11.1999C7.53237 11.1999 7.0657 11.0199 6.71237 10.6666L2.3657 6.31993C2.17237 6.12659 2.17237 5.8066 2.3657 5.61326C2.55904 5.41993 2.87904 5.41993 3.07237 5.61326L7.41904 9.95993C7.73904 10.2799 8.25904 10.2799 8.57904 9.95993L12.9257 5.61326C13.119 5.41993 13.439 5.41993 13.6324 5.61326C13.8257 5.8066 13.8257 6.12659 13.6324 6.31993L9.2857 10.6666C8.93237 11.0199 8.4657 11.1999 7.99904 11.1999Z"
+                      fill="#717171"
+                    />
+                  </svg>
+                </a>
+                <div class="site-header__dropdown">
+                  <nav class="site-header__dropdown-nav">
+                    <ul class="site-header__dropdown-list">
+                      <li class="site-header__dropdown-item body-sm">
+                        <a class="site-header__dropdown-link" href=""
+                          >غذای اصلی</a
+                        >
+                      </li>
+                      <li class="site-header__dropdown-item body-sm">
+                        <a class="site-header__dropdown-link" href=""
+                          >غذای اصلی</a
+                        >
+                      </li>
+                      <li class="site-header__dropdown-item body-sm">
+                        <a class="site-header__dropdown-link" href=""
+                          >غذای اصلی</a
+                        >
+                      </li>
+                      <li class="site-header__dropdown-item body-sm">
+                        <a class="site-header__dropdown-link" href=""
+                          >غذای اصلی</a
+                        >
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </li>
+              <li class="site-header__nav-item">
+                <a class="site-header__nav-link" href="">اعطای نمایندگی</a>
+              </li>
+              <li class="site-header__nav-item">
+                <a class="site-header__nav-link" href="">درباره ما</a>
+              </li>
+              <li class="site-header__nav-item">
+                <a class="site-header__nav-link" href="">تماس با ما</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
         <div class="site-header__actions">
           <label for="open-search" class="site-header__btn">
             <svg class="site-header__icon">
