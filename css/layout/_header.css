@@ -215,3 +215,30 @@
     height: 80px;
   }
 }
+
+@media screen and (max-width: 40em) {
+  .site-header {
+    height: 64px;
+  }
+  .site-header__brand {
+    width: 102px;
+    height: 32px;
+  }
+  .site-header__btn{
+    width: 24px;
+    height: 24px;
+  }
+  .site-header__icon{
+    width: 16px;
+    height: 16px;
+  }
+  .site-header__nav-list{
+    font-size: 2.5rem !important;
+  }
+  .site-header__nav-item.site-header__nav-item--active{
+    font-size: 3rem;
+  }
+  .site-header__nav-item{
+    height: 34px;
+  }
+}

@@ -74,3 +74,27 @@
     padding-top: 125px;
   }
 }
+
+@media screen and (max-width: 40em) {
+  .swiper-slide-container {
+    padding-top: 78px;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+  .swiper-pagination {
+    height: 20px;
+    background: url("/images/Rectangle\ 2.png") no-repeat center center;
+  }
+  .swiper-pagination-bullet {
+    width: 4px;
+    height: 4px;
+    margin: 0 2px !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 8px;
+    height: 8px;
+  }
+}

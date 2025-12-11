@@ -23,3 +23,9 @@
     max-width: 600px;
   }
 }
+/* sm */
+@media screen and (max-width: 40em) {
+  .container {
+    max-width: 320px;
+  }
+}
