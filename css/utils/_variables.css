@@ -22,6 +22,7 @@
 
   --font-family-base: "Estedad", "Segoe UI", system-ui, -apple-system,
     "Helvetica Neue", Arial, sans-serif;
+
   /* Primary palette */
   --color-primary: #417f56;
   --color-primary-tint-1: #e5f2e9;
@@ -84,4 +85,69 @@
   --padding-sm: var(--spacing-16);
   --padding-md: var(--spacing-24);
   --padding-lg: var(--spacing-32);
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    /* Neutral palette - Inverted & Brightened for Contrast */
+    --color-neutral-white: #121212;
+    --color-neutral-gray-1: #1e1e1e;
+    --color-neutral-gray-2: #2c2c2c;
+    --color-neutral-gray-3: #3a3a3a;
+    --color-neutral-gray-4: #5c5c5c;
+    --color-neutral-gray-5: #757575;
+    --color-neutral-gray-6: #9e9e9e;
+    --color-neutral-gray-7: #bdbdbd;
+    --color-neutral-gray-8: #e0e0e0;
+    --color-neutral-black: #ffffff;
+
+    /* Primary palette - More Vibrant for Dark Mode */
+    --color-primary: #71c991;
+
+    /* Tints (Light mode: Light) -> Dark Mode: Dark (for backgrounds) */
+    --color-primary-tint-1: #102016;
+    --color-primary-tint-2: #183020;
+    --color-primary-tint-3: #21402b;
+    --color-primary-tint-4: #294f36;
+    --color-primary-tint-5: #315f41;
+    --color-primary-tint-6: #396f4b;
+    --color-primary-tint-7: #417f56;
+
+    /* Shades (Light mode: Dark) -> Dark Mode: Light (for text/accents) */
+    --color-primary-shade-1: #7cbc91;
+    --color-primary-shade-2: #96c9a7;
+    --color-primary-shade-3: #b0d7bd;
+    --color-primary-shade-4: #cae4d3;
+    --color-primary-shade-5: #e5f2e9;
+    --color-primary-shade-6: #f0f7f2;
+    --color-primary-shade-7: #ffffff;
+
+    /* Status palette - Brightened */
+    --color-status-success: #00e6a8;
+    --color-status-success-light: #00ba88;
+    --color-status-success-extra-light: #003322;
+
+    --color-status-error: #ff8a80;
+    --color-status-error-light: #ff5252;
+    --color-status-error-extra-light: #330000;
+
+    --color-status-warning: #ffd54f;
+    --color-status-warning-light: #ffb74d;
+    --color-status-warning-extra-light: #332200;
+
+    /* Shadows */
+    --shadow-drop-2: 0px 2px 2px 0px rgba(0, 0, 0, 0.8);
+    --shadow-drop-4: 0px 4px 4px 0px rgba(0, 0, 0, 0.8);
+    --shadow-drop-6: 0px 6px 6px 0px rgba(0, 0, 0, 0.8);
+    --shadow-drop-8: 0px 8px 8px 0px rgba(0, 0, 0, 0.8);
+    --shadow-drop-16: 0px 16px 16px 0px rgba(0, 0, 0, 0.8);
+    --shadow-card: 0px 0px 0px 0px rgba(0, 0, 0, 0.5),
+      0px 1px 2px 0px rgba(0, 0, 0, 0.5), 0px 4px 4px 0px rgba(0, 0, 0, 0.45),
+      0px 9px 5px 0px rgba(0, 0, 0, 0.25), 0px 16px 6px 0px rgba(0, 0, 0, 0.05),
+      0px 25px 7px 0px rgba(0, 0, 0, 0);
+    --shadow-contact-card: 0px 0px 0px 0px rgba(0, 0, 0, 0.5),
+      0px 3px 6px 0px rgba(0, 0, 0, 0.5), 0px 11px 11px 0px rgba(0, 0, 0, 0.45),
+      0px 24px 14px 0px rgba(0, 0, 0, 0.25),
+      0px 42px 17px 0px rgba(0, 0, 0, 0.05), 0px 66px 18px 0px rgba(0, 0, 0, 0);
+  }
 }
