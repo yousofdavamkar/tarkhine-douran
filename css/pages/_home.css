@@ -44,7 +44,8 @@
   width: 240px;
   position: absolute;
   bottom: var(--spacing-40);
-  left: calc(50% - (240px / 2));
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .menu__item-link.btn {
@@ -174,4 +175,21 @@
   width: 48px;
   height: 48px;
   fill: white;
+}
+
+/* lg */
+@media screen and (max-width: 80em) {
+  .menu__list {
+    margin-top: 100px;
+  }
+  .menu__item-image {
+    width: 200px;
+  }
+  .about .container {
+    gap: 100px;
+  }
+
+  .about__feature-text{
+    text-align: center;
+  }
 }

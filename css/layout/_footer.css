@@ -128,3 +128,39 @@
     margin-left: auto;
   }
 }
+
+/* lg */
+
+@media screen and (max-width: 80em) {
+  .footer .container {
+    display: grid;
+    gap: var(--spacing-32);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+      "tag1 tag2"
+      "tag3 tag3";
+  }
+  .footer__column:nth-of-type(1) {
+    grid-area: tag1;
+  }
+  .footer__column:nth-of-type(2) {
+    grid-area: tag2;
+  }
+  .footer__column:nth-of-type(3) {
+    grid-area: tag3;
+  }
+  .footer__form-inputs,
+  .footer__form-group {
+    flex: 1;
+  }
+
+  .footer__textarea,
+  .footer__input {
+    width: 100%;
+  }
+
+  .footer__textarea {
+    height: 100%;
+  }
+}
