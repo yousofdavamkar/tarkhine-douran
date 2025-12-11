@@ -109,3 +109,19 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+/* lg */
+
+@media screen and (max-width: 80em) {
+  .branch {
+    height: 280px;
+  }
+
+  .branch__image {
+    height: 200px;
+  }
+
+  .branch__info {
+    top: calc(100% - 110px);
+  }
+}

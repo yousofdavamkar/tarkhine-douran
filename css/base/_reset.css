@@ -16,6 +16,12 @@ html {
   font-size: 62.5%;
 }
 
+@media screen and (max-width: 80em) {
+  html {
+    font-size: 60%;
+  }
+}
+
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -29,7 +35,7 @@ canvas,
 svg {
   display: block;
   max-width: 100%;
-  height: 100%  ;
+  height: 100%;
   border-radius: inherit;
 }
 
@@ -73,13 +79,11 @@ button {
   cursor: pointer;
 }
 
-
-::selection{
+::selection {
   background-color: var(--color-primary);
   color: var(--color-neutral-white);
 }
 
-
-input[type="checkbox"]{
+input[type="checkbox"] {
   accent-color: var(--color-primary);
 }
