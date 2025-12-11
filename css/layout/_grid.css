@@ -16,3 +16,10 @@
     max-width: 750px;
   }
 }
+
+/* md */
+@media screen and (max-width: 48em) {
+  .container {
+    max-width: 600px;
+  }
+}

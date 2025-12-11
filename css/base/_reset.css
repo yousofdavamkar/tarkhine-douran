@@ -34,6 +34,12 @@ html {
   }
 }
 
+@media screen and (max-width: 48em) {
+  html {
+    font-size: 50%;
+  }
+}
+
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;

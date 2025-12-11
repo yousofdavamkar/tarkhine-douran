@@ -18,3 +18,10 @@
   height: var(--spacing-32) !important;
   fill: var(--color-neutral-white) !important;
 }
+
+
+@media screen and (max-width: 48em) {
+  .slider {
+    height: 300px;
+  }
+}
