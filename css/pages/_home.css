@@ -218,3 +218,21 @@
     grid-auto-rows: auto;
   }
 }
+
+
+@media screen and (max-width: 48em) {
+  .menu__item-image {
+    width: 200px;
+  }
+  .about .container{
+    flex-direction: column;
+    gap: var(--spacing-24);
+  }
+}
+
+
+@media screen and (max-width: 48em){
+  .branches__list {
+    grid-template-columns: 1fr;
+  }
+}

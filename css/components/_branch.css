@@ -132,3 +132,35 @@
     top: calc(100% - 85px);
   }
 }
+
+@media screen and (max-width: 48em) {
+  .branch {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 150px;
+    padding-bottom: 0;
+  }
+  .branch__image {
+    flex: 45;
+    height: 100%;
+    border-radius: 0 4px 4px 0;
+  }
+  .branch__image::before{
+    display: none !important;
+  }
+  .branch__info {
+    flex: 55;
+    position: static;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .branch__link {
+    display: none !important;
+  }
+  .branch__layer{
+    display: none ;
+  }
+}

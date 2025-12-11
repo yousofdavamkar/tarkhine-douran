@@ -209,3 +209,9 @@
     transition-delay: 600ms;
   }
 }
+
+@media screen and (max-width: 48em) {
+  .site-header {
+    height: 80px;
+  }
+}

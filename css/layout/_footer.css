@@ -164,3 +164,13 @@
     height: 100%;
   }
 }
+
+@media screen and (max-width: 48em) {
+  .footer__column:nth-of-type(3) {
+    display: none;
+  }
+
+  .footer .container {
+    row-gap: 0;
+  }
+}
