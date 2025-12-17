@@ -1,4 +1,5 @@
 .shopping-cart {
+  direction: ltr;
   position: relative;
   display: flex;
   background: var(--color-neutral-white);
@@ -6,9 +7,8 @@
   border-radius: var(--radius-8);
   width: 65.6rem;
   height: 15.8rem;
-  align-self: center;
-  justify-self: center;
-  top: 50%;
+
+ 
 }
 .shopping-cart__image {
   display: flex;

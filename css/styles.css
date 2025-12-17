@@ -19,10 +19,11 @@
 @import url('/css/components/_slider.css');
 @import url('/css/components/_dropdown.css');
 @import url('/css/components/_modal.css');
-@import url('/css/components/-shoppingcart.css');
+
 @import url('/css/components/-stare.css');
-@import url('/css/components/-menu_item_food.css');
-@import url(/css//components/-menu_item_food.css);
+@import url('/css/components/-chips-list.css');
+@import url('/css/components/-shoppingcart.css');
+
 /* Layout styles */
 @import url('/css/layout/_footer.css');
 @import url('/css/layout/_form.css');
@@ -31,5 +32,6 @@
 
 /* Page-specific styles */
 @import url('/css/pages/_home.css');
+@import url('/css/pages/page_menu.css');
 /* Vendor styles */
 @import url('/css/vendor/_swiper.css');

@@ -31,7 +31,6 @@
   <body>
     <!-- header -->
 
-
     <header class="site-header">
       <div class="container">
         <div class="site-header__brand">
@@ -186,73 +185,257 @@
 
     <!-- main -->
     <main class="slider">
-   <div class="swiper swiper_page_menu  mySwiper">
-    <div class="swiper-wrapper swiper-wrapper_page_menu">
-      <div class="swiper-slide page_menu"></div>
-      <div class="swiper-slide page_menu">Slide 2</div>
-      <div class="swiper-slide page_menu">Slide 3</div>
-      <div class="swiper-slide page_menu">Slide 4</div>
-      <div class="swiper-slide page_menu">Slide 5</div>
-    </div>
-       <div class="swiper-button-next">
-            <svg class="slider__icon">
-              <use
-                xlink:href="/icons/sprite.svg#iconsax-arrow-right-02-vebkk791-"
-              ></use>
-            </svg>
-          </div>
-          <div class="swiper-button-prev">
-            <svg class="slider__icon">
-              <use
-                xlink:href="/icons/sprite.svg#iconsax-arrow-left-02-ppudyiv3-"
-              ></use>
-            </svg>
-          </div><div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-      <div class="swiper-pagination"></div>
-  </div>
+      <div class="swiper swiper_page_menu mySwiper">
+        <div class="swiper-wrapper swiper-wrapper_page_menu">
+          <div class="swiper-slide page_menu"></div>
+          <div class="swiper-slide page_menu">Slide 2</div>
+          <div class="swiper-slide page_menu">Slide 3</div>
+          <div class="swiper-slide page_menu">Slide 4</div>
+          <div class="swiper-slide page_menu">Slide 5</div>
+        </div>
+        <div class="swiper-button-next">
+          <svg class="slider__icon">
+            <use
+              xlink:href="/icons/sprite.svg#iconsax-arrow-right-02-vebkk791-"
+            ></use>
+          </svg>
+        </div>
+        <div class="swiper-button-prev">
+          <svg class="slider__icon">
+            <use
+              xlink:href="/icons/sprite.svg#iconsax-arrow-left-02-ppudyiv3-"
+            ></use>
+          </svg>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
     </main>
 
-
-
-    <main>
-      <nav class="">
-        <ul class="menu__list-food">
-          <li class="menu__item-food">
-            <a class="menu__link-food" href="">غذاهای ایرانی </a>
-               <svg class="menu_icon-food">  <use xlink:href="/icons/sprite.svg#iconsax-arrow-left-02-ppudyiv3-"></use></svg> </li>
-          <li class="menu__item-food">
-            <a class="menu__link-food" href="">غذاهای غیر ایرانی</a>
-                           <svg class="menu_icon-food">  <use xlink:href="/icons/sprite.svg#iconsax-arrow-left-02-ppudyiv3-"></use></svg> </li>
-
-            
+    <main class="food-type">
+      <div class="food-type__container">
+        <ul class="food-type__list">
+          <li class="food-type__item">
+            <a href="" class="food-type__link">غذای اصلی</a>
           </li>
-          <li class="menu__item-food">
-            <a class="menu__link-food" href="">پیتزاها</a>
-                           <svg class="menu_icon-food">  <use xlink:href="/icons/sprite.svg#iconsax-arrow-left-02-ppudyiv3-"></use></svg> </li>
-
-            
+          <li class="food-type__item">
+            <a href="" class="food-type__link">پیش غذا</a>
           </li>
-          <li class="menu__item-food">
-            <a class="menu__link-food" href="">ساندویچ‌ها</a>
-                           <svg class="menu_icon-food">  <use xlink:href="/icons/sprite.svg#iconsax-arrow-left-02-ppudyiv3-"></use></svg> </li>
-
-            
+          <li class="food-type__item">
+            <a href="" class="food-type__link">دسر</a>
           </li>
-          <li class="menu__item-food">
-            <a class="menu__link-food" href="">پرفروش‌ترین</a>
-                           <svg class="menu_icon-food">  <use xlink:href="/icons/sprite.svg#iconsax-arrow-left-02-ppudyiv3-"></use></svg> </li>
-
-            
-          </li>
-          <li class="menu__item-food">
-            <a class="menu__link-food" href="">پرفروش‌ترین</a>
-                           <svg class="menu_icon-food">  <use xlink:href="/icons/sprite.svg#iconsax-arrow-left-02-ppudyiv3-"></use></svg> </li>
-
-            
+          <li class="food-type__item">
+            <a href="" class="food-type__link">نوشیدنی</a>
           </li>
         </ul>
-      </nav>
+      </div>
+    </main>
+    <main class="food_serche" dir="rtl">
+      <ul class="menu__list-food">
+        <li class="menu__item-food">
+          <a href="#" class="menu__link">غذاهای ایرانی</a>
+          <svg class="menu_icon-food" aria-hidden="true">
+            <use
+              xlink:href="/icons/sprite.svg#iconsax-arrow-left-02-ppudyiv3-"
+            ></use>
+          </svg>
+        </li>
+
+        <li class="menu__item-food">
+          <a href="#" class="menu__link">غذاهای غیر ایرانی</a>
+          <svg class="menu_icon-food" aria-hidden="true">
+            <use
+              xlink:href="/icons/sprite.svg#iconsax-arrow-left-02-ppudyiv3-"
+            ></use>
+          </svg>
+        </li>
+
+        <li class="menu__item-food">
+          <a href="#" class="menu__link">پیتزاها</a>
+          <svg class="menu_icon-food" aria-hidden="true">
+            <use
+              xlink:href="/icons/sprite.svg#iconsax-arrow-left-02-ppudyiv3-"
+            ></use>
+          </svg>
+        </li>
+
+        <li class="menu__item-food">
+          <a href="#" class="menu__link">ساندویچ‌ها</a>
+          <svg class="menu_icon-food" aria-hidden="true">
+            <use
+              xlink:href="/icons/sprite.svg#iconsax-arrow-left-02-ppudyiv3-"
+            ></use>
+          </svg>
+        </li>
+
+        <li class="menu__item-food">
+          <a href="#" class="menu__link">پرفروش‌ترین</a>
+          <svg class="menu_icon-food" aria-hidden="true">
+            <use
+              xlink:href="/icons/sprite.svg#iconsax-arrow-left-02-ppudyiv3-"
+            ></use>
+          </svg>
+        </li>
+
+        <li class="menu__item-food">
+          <a href="#" class="menu__link">اقتصادی‌ترین</a>
+          <svg class="menu_icon-food" aria-hidden="true">
+            <use
+              xlink:href="/icons/sprite.svg#iconsax-arrow-left-02-ppudyiv3-"
+            ></use>
+          </svg>
+        </li>
+      </ul>
+      <div class="food_serche__box">
+        <form action="#" role="search">
+          <input
+            id="food-search"
+            type="search"
+            name="q"
+            placeholder="جستجوی غذا..."
+            class="food_serche__input"
+            autocomplete="off"
+          />
+          <button type="submit" class="food_serche__icon">
+            <svg class="">
+              <use
+                xlink:href="/icons/sprite.svg#iconsax-search-vaym754o-"
+              ></use>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </main>
+    <main class="food_item">
+      <div class="food_item_link">
+        <span class="food_item"></span>
+        <span class="buy_food_item"></span>
+            <div class="shopping-cart">
+      <div class="shopping-cart__item">
+        <img
+          src="./images/Food Picture.png"
+          alt="product"
+          class="shopping-cart__image"
+        />
+        <div class="shopping-cart__content">
+          <div class="shopping-cart__title"><h4>پاستا سبزیجات</h4></div>
+
+          <div class="shopping-cart__recipe">
+            پاستا، قارچ، گوجه، کدوی خوردشده، پیاز خلالی‌شده
+          </div>
+
+          <div class="shopping-cart__actions">
+            <button class="shopping-cart__btn--decrease">
+              <svg class="">
+                <use xlink:href="/icons/sprite.svg#-"></use>
+              </svg>
+            </button>
+            <span class="shopping-cart__namber">1</span>
+            <button class="shopping-cart__btn--increase">
+              <svg class="">
+                <use xlink:href="/icons/sprite.svg#+"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="star Rate">
+            <svg class="star_active">
+              <use xlink:href="/icons/sprite.svg#Star_halo"></use>
+            </svg>
+            <svg class="star_active">
+              <use xlink:href="/icons/sprite.svg#Star_halo"></use>
+            </svg>
+            <svg class="star_active">
+              <use xlink:href="/icons/sprite.svg#Star_halo"></use></svg
+            ><svg class="star_notactive">
+              <use xlink:href="/icons/sprite.svg#Star_halo"></use>
+            </svg>
+            <svg class="star_notactive">
+              <use xlink:href="/icons/sprite.svg#Star_halo"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="shopping-cart__price">
+          <span class="discount_cntinr">
+            <span class="shopping-cart__price-quantity">%۲۰</span>
+          <span class="shopping-cart__price-value">۱۷۵٬۰۰۰</span>
+         
+          </span>
+
+          <span class="mony" >تومان
+            <span class="shopping-cart__price-discount">۱۵۰٬۰۰۰</span>
+            </span>
+        </div>
+        <button class="tras">
+          <svg class="">
+            <use xlink:href="/icons/sprite.svg#Heart"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+           <div class="shopping-cart">
+      <div class="shopping-cart__item">
+        <img
+          src="./images/Food Picture.png"
+          alt="product"
+          class="shopping-cart__image"
+        />
+        <div class="shopping-cart__content">
+          <div class="shopping-cart__title"><h4>پاستا سبزیجات</h4></div>
+
+          <div class="shopping-cart__recipe">
+            پاستا، قارچ، گوجه، کدوی خوردشده، پیاز خلالی‌شده
+          </div>
+
+          <div class="shopping-cart__actions">
+            <button class="shopping-cart__btn--decrease">
+              <svg class="">
+                <use xlink:href="/icons/sprite.svg#-"></use>
+              </svg>
+            </button>
+            <span class="shopping-cart__namber">1</span>
+            <button class="shopping-cart__btn--increase">
+              <svg class="">
+                <use xlink:href="/icons/sprite.svg#+"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="star Rate">
+            <svg class="star_active">
+              <use xlink:href="/icons/sprite.svg#Star_halo"></use>
+            </svg>
+            <svg class="star_active">
+              <use xlink:href="/icons/sprite.svg#Star_halo"></use>
+            </svg>
+            <svg class="star_active">
+              <use xlink:href="/icons/sprite.svg#Star_halo"></use></svg
+            ><svg class="star_notactive">
+              <use xlink:href="/icons/sprite.svg#Star_halo"></use>
+            </svg>
+            <svg class="star_notactive">
+              <use xlink:href="/icons/sprite.svg#Star_halo"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="shopping-cart__price">
+          <span class="discount_cntinr">
+            <span class="shopping-cart__price-quantity">%۲۰</span>
+          <span class="shopping-cart__price-value">۱۷۵٬۰۰۰</span>
+         
+          </span>
+
+          <span class="mony" >تومان
+            <span class="shopping-cart__price-discount">۱۵۰٬۰۰۰</span>
+            </span>
+        </div>
+        <button class="tras">
+          <svg class="">
+            <use xlink:href="/icons/sprite.svg#Heart"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+      </div>
     </main>
     <!-- footer -->
     <footer class="footer">

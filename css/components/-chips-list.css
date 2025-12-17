@@ -1,0 +1,58 @@
+.food_serche {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;  
+  align-items: center;
+  width: 100%;
+  max-width: 1440px;         
+  margin: 0 auto;
+}
+
+.menu__list-food {
+  display: flex;
+  padding: 17.5px 0;
+  gap: 8px;
+}
+
+.menu__item-food {
+  display: flex;
+  align-items: center;
+  padding: 1.5px 8px 1.5px 28px;
+  font-size: 16px;
+  height: 32px;
+  background: #EDEDED;
+  border-radius: 64px;
+  color: #353535;
+  position: relative;
+}
+
+.menu_icon-food {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 16px;
+  height: 16px;
+  fill: #000;
+}
+
+.food_serche__box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  max-width: 496px;
+  height: 40px;
+  border: 1px solid #CBCBCB;
+  border-radius: 8px;
+  position: relative; /* برای آیکون */
+}
+
+.food_serche__icon {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 16px;
+  top: 8px;
+}
