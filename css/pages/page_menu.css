@@ -1,16 +1,3 @@
-.food_item_link {
-  position: relative;
-  display: grid;
-  grid-template-rows:auto; 
-  grid-template-columns:  repeat(2, 1fr);       
-  width: 1224px;
-  height: 1068px;
-  gap: 24px;                        
-  padding: 0;
-  align-items: center;               
-  justify-items: center;       
-  padding: 0 calc(50% - 42.5%);     
-}
 
 
 .food-type__container{
@@ -21,14 +8,12 @@ width: 100%;
 height:64px;
 padding: 0 calc(50% - 40.5%);
 display: flex;
-flex-direction: row;
 }
 
 
 .food-type__list{
 
 display: flex;
-flex-direction: row;
 justify-content: center;
 align-items: center;
 
@@ -46,3 +31,17 @@ padding: 0px;
 
 
 
+.food_item_link {
+  position: relative;
+  display: grid;
+
+  grid-template-columns:  repeat(2,1fr);
+ margin: 48px auto;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 24px;
+
+width: 1224px;
+
+}

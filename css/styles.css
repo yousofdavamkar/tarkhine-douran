@@ -19,10 +19,10 @@
 @import url('/css/components/_slider.css');
 @import url('/css/components/_dropdown.css');
 @import url('/css/components/_modal.css');
-
+@import url('/css/components/-menu_card.css');
 @import url('/css/components/-stare.css');
 @import url('/css/components/-chips-list.css');
-@import url('/css/components/-shoppingcart.css');
+
 
 /* Layout styles */
 @import url('/css/layout/_footer.css');

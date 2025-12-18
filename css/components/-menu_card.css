@@ -1,44 +1,49 @@
-.shopping-cart {
+.menu_card {
   direction: ltr;
   position: relative;
   display: flex;
   background: var(--color-neutral-white);
   border: 1px solid var(--color-neutral-gray-4);
   border-radius: var(--radius-8);
-  width: 65.6rem;
+  width: 600px;
   height: 15.8rem;
 
  
 }
-.shopping-cart__image {
+.menu_card__image {
   display: flex;
-  position: absolute;
-  width: 16.9rem;
-  height: 15.8rem;
-  left: 48.7rem;
+
+position: absolute;
+width: 169px;
+height: 158px;
+right: 0px;
+top: 0px;
+border-radius: 0px 4px 4px 0px;
+
 }
-.shopping-cart__title {
+.menu_card__title {
   position: absolute;
   top: 16px;
-  left: 192px;
+  left: 136px;
   width: 263px;
   height: 36px;
   text-align: end;
 
   font-size: 20px;
+  
 }
-.shopping-cart__recipe {
+.menu_card__recipe {
   position: absolute;
   font-size: 14px;
-  width: 295px;
+  width: 263px;
   height: 50px;
   top: 54px;
-  left: 160px;
+  left: 136px;
   text-align: end;
 }
-.shopping-cart__btn--increase,
-.shopping-cart__namber,
-.shopping-cart__btn--decrease {
+.menu_card__btn--increase,
+.menu_card__namber,
+.menu_card__btn--decrease {
 width: 9px;
 height: 25px;
 font-size: 14px;
@@ -46,7 +51,7 @@ line-height: 180%;
 text-align:center;
 color: var(--color-primary);
 }
-.shopping-cart__actions {
+.menu_card__actions {
   position: absolute;
   display: flex;
   flex-direction: row;
@@ -65,8 +70,9 @@ color: var(--color-primary);
   background: var(--color-primary-tint-1);
   border: 1px solid var(--color-primary-tint-1);
   border-radius: var(--radius-4);
+  display: none;
 }
-.shopping-cart__quantity {
+.menu_card__quantity {
   width: 0.9rem;
   height: 2.5rem;
 }
@@ -75,8 +81,8 @@ color: var(--color-primary);
 position: absolute;
 width: var(--spacing-24);
 height: var(--spacing-24);
-left: 32px;
-top: 22px;
+left: 16px;
+top: 14px;
 }
 
 
@@ -92,13 +98,13 @@ top: 22px;
   position: absolute;
   width: 103px;
   height: 29px;
-  left: 32px;
-  top: 73px;
+  left: 16px;
+  top:45px;
 
 
 
 }
-.shopping-cart__price-value{
+.menu_card__price-value{
 
 width: 53px;
 height: 29px;
@@ -122,7 +128,7 @@ flex-grow: 0;
 }
 
 
-.shopping-cart__price-quantity{
+.menu_card__price-quantity{
 width: var(--spacing-32);
 height: 19px;
 background: var(--color-status-error-extra-light);
@@ -151,8 +157,8 @@ gap: var(--spacing-8);
 position: absolute;
 width: 109px;
 height: 36px;
-left: 32px;
-top: 106px;
+left:16px;
+top: 74px;
 
 
 
