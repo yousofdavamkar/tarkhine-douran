@@ -1,0 +1,29 @@
+{
+  "name": "tarkhine-douran",
+  "version": "1.0.0",
+  "description": "Kickstart a lightweight front-end project with this vanilla HTML, CSS, and JavaScript scaffold. The repo is ideal for quick prototypes, coding exercises, or as a foundation you can extend into a production-ready app.",
+  "homepage": "https://github.com/yousofdavamkar/tarkhine-douran#readme",
+  "bugs": {
+    "url": "https://github.com/yousofdavamkar/tarkhine-douran/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yousofdavamkar/tarkhine-douran.git"
+  },
+  "license": "ISC",
+  "author": "Yousof Davamkar",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "swiper": "^12.0.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.23",
+    "postcss": "^8.5.6",
+    "vite": "^7.3.0"
+  }
+}
