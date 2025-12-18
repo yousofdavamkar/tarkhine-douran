@@ -1,13 +1,15 @@
+@import "tailwindcss";
+
 /* Utility styles */
 
-@import url('/src/css/utils/_variables.css');
+/* @import url('/src/css/utils/_variables.css'); */
 
 /* Base styles */
-@import url('/src/css/base/_reset.css');
-@import url('/src/css/base/_typography.css');
+/* @import url('/src/css/base/_reset.css');
+@import url('/src/css/base/_typography.css'); */
 
 /* Component styles */
-@import url('/src/css/components/_branch.css');
+/* @import url('/src/css/components/_branch.css');
 @import url('/src/css/components/_card-buttons.css');
 @import url('/src/css/components/_login.css');
 @import url('/src/css/components/_product-card.css');
@@ -17,14 +19,14 @@
 @import url('/src/css/components/_buttons.css');
 @import url('/src/css/components/_slider.css');
 @import url('/src/css/components/_dropdown.css');
-@import url('/src/css/components/_modal.css');
+@import url('/src/css/components/_modal.css'); */
 /* Layout styles */
-@import url('/src/css/layout/_footer.css');
+/* @import url('/src/css/layout/_footer.css');
 @import url('/src/css/layout/_form.css');
 @import url('/src/css/layout/_header.css');
-@import url('/src/css/layout/_grid.css');
+@import url('/src/css/layout/_grid.css'); */
 
 /* Page-specific styles */
-@import url('/src/css/pages/_home.css');
+/* @import url('/src/css/pages/_home.css'); */
 /* Vendor styles */
-@import url('/src/css/vendor/_swiper.css');
+/* @import url('/src/css/vendor/_swiper.css'); */
