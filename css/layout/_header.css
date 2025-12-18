@@ -105,9 +105,17 @@
 #close-menu {
   display: none;
 }
+.site-header__menu-btn,
+.site-header__mobile {
+  display: none;
+}
 
 /* md */
 @media screen and (max-width: 64em) {
+  .site-header__menu-btn,
+  .site-header__mobile {
+    display: block;
+  }
   .site-header__menu {
     background-color: rgba(0, 0, 0, 60%);
     backdrop-filter: blur(6px);
@@ -224,21 +232,21 @@
     width: 102px;
     height: 32px;
   }
-  .site-header__btn{
+  .site-header__btn {
     width: 24px;
     height: 24px;
   }
-  .site-header__icon{
+  .site-header__icon {
     width: 16px;
     height: 16px;
   }
-  .site-header__nav-list{
+  .site-header__nav-list {
     font-size: 2.5rem !important;
   }
-  .site-header__nav-item.site-header__nav-item--active{
+  .site-header__nav-item.site-header__nav-item--active {
     font-size: 3rem;
   }
-  .site-header__nav-item{
+  .site-header__nav-item {
     height: 34px;
   }
 }
