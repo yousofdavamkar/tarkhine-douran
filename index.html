@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="رستوران های زنجیره ای ترخینه" />
     <title>رستوران های زنجیره ای ترخینه</title>
     <!-- favicon -->
     <link
@@ -66,7 +67,11 @@
           </svg>
         </label>
         <div class="site-header__brand">
-          <img class="site-header__logo" src="/images/Logo.png" alt="logo" />
+          <picture class="site-header__logo">
+            <source srcset="/images/Logo.webp" type="image/webp" />
+            <source srcset="/images/Logo.png" type="image/png" />
+            <img src="/images/Logo.png" alt="logo" />
+          </picture>
         </div>
         <div class="site-header__menu">
           <nav class="site-header__nav">
@@ -395,7 +400,23 @@
             <div class="menu__item">
               <div class="menu__container">
                 <div class="menu__item-image">
-                  <img src="/images/plate.png" alt="plate" />
+                  <picture>
+                    <source
+                      srcset="/images/plate-mobile.webp"
+                      type="image/webp"
+                      media="screen and (max-width: 48em)"
+                    />
+                    <source
+                      srcset="/images/plate-tablet.webp"
+                      type="image/webp"
+                      media="screen and (max-width: 64em)"
+                    />
+                    <source
+                      srcset="/images/plate-desktop.webp"
+                      type="image/webp"
+                    />
+                    <img src="/images/plate.png" alt="plate" />
+                  </picture>
                 </div>
                 <a
                   class="menu__item-link btn btn--fill-white btn--size-48 body-xl"
@@ -407,7 +428,39 @@
             <div class="menu__item">
               <div class="menu__container">
                 <div class="menu__item-image">
-                  <img src="/images/plate.png" alt="plate" />
+                  <picture>
+                    <source
+                      srcset="
+                        /images/plate-mobile.webp    1x,
+                        /images/plate-mobile-2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="screen and (max-width: 48em)"
+                    />
+                    <source
+                      srcset="
+                        /images/plate-tablet.webp    1x,
+                        /images/plate-tablet-2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="screen and (max-width: 64em)"
+                    />
+                    <source
+                      srcset="
+                        /images/plate-desktop.webp    1x,
+                        /images/plate-desktop-2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <img
+                      src="images/plate-desktop-2x.webp"
+                      srcset="
+                        images/plate-desktop-1x.webp 1x,
+                        images/plate-desktop-2x.webp 2x
+                      "
+                      alt="plate"
+                    />
+                  </picture>
                 </div>
                 <a
                   class="menu__item-link btn btn--fill-white btn--size-48 body-xl"
@@ -419,7 +472,23 @@
             <div class="menu__item">
               <div class="menu__container">
                 <div class="menu__item-image">
-                  <img src="/images/plate.png" alt="plate" />
+                  <picture>
+                    <source
+                      srcset="/images/plate-mobile.webp"
+                      type="image/webp"
+                      media="screen and (max-width: 48em)"
+                    />
+                    <source
+                      srcset="/images/plate-tablet.webp"
+                      type="image/webp"
+                      media="screen and (max-width: 64em)"
+                    />
+                    <source
+                      srcset="/images/plate-desktop.webp"
+                      type="image/webp"
+                    />
+                    <img src="/images/plate.png" alt="plate" />
+                  </picture>
                 </div>
                 <a
                   class="menu__item-link btn btn--fill-white btn--size-48 body-xl"
@@ -431,7 +500,23 @@
             <div class="menu__item">
               <div class="menu__container">
                 <div class="menu__item-image">
-                  <img src="/images/plate.png" alt="plate" />
+                  <picture>
+                    <source
+                      srcset="/images/plate-mobile.webp"
+                      type="image/webp"
+                      media="screen and (max-width: 48em)"
+                    />
+                    <source
+                      srcset="/images/plate-tablet.webp"
+                      type="image/webp"
+                      media="screen and (max-width: 64em)"
+                    />
+                    <source
+                      srcset="/images/plate-desktop.webp"
+                      type="image/webp"
+                    />
+                    <img src="/images/plate.png" alt="plate" />
+                  </picture>
                 </div>
                 <a
                   class="menu__item-link btn btn--fill-white btn--size-48 body-xl"

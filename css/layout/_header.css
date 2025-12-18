@@ -78,6 +78,17 @@
   pointer-events: initial;
 }
 
+@media (hover: none) and (pointer: coarse) {
+  .site-header__nav-item:active > .site-header__dropdown,
+  .site-header__btn:active > .site-header__dropdown,
+  .site-header__nav-item:focus-within > .site-header__dropdown,
+  .site-header__btn:focus-within > .site-header__dropdown {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: initial;
+  }
+}
+
 #open-search:checked ~ .modal__backdrop {
   opacity: 1;
   visibility: visible;

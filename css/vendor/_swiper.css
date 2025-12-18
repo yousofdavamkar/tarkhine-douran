@@ -47,7 +47,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url("/images//pagination.png") no-repeat center center;
+  background: url("/images/pagination.png") no-repeat center center;
   bottom: -1px !important;
 }
 
@@ -75,6 +75,8 @@
   }
 }
 
+
+
 @media screen and (max-width: 40em) {
   .swiper-slide-container {
     padding-top: 78px;
@@ -83,10 +85,7 @@
   .swiper-button-next {
     display: none;
   }
-  .swiper-pagination {
-    height: 20px;
-    background: url("/images/Rectangle\ 2.png") no-repeat center center;
-  }
+
   .swiper-pagination-bullet {
     width: 4px;
     height: 4px;
@@ -96,5 +95,13 @@
   .swiper-pagination-bullet-active {
     width: 8px;
     height: 8px;
+  }
+}
+
+@media screen and (max-width: 40em) and (min-resolution: 2dppx),
+  screen and (max-width: 40em) and (-webkit-min-device-pixel-ratio: 2) {
+  .swiper-pagination {
+    height: 20px;
+    background: url("/images/Rectangle\ 2.png") no-repeat center center;
   }
 }

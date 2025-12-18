@@ -42,11 +42,13 @@
 }
 .menu__item-image {
   width: 240px;
+  aspect-ratio: 1/1;
   position: absolute;
   bottom: var(--spacing-40);
   left: 50%;
   transform: translateX(-50%);
 }
+
 
 .menu__item-link.btn {
   width: 156px;
@@ -298,7 +300,7 @@
     padding: var(--spacing-24) 0;
   }
 
-  .branches__title{
+  .branches__title {
     font-size: 4rem;
   }
 }
