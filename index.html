@@ -24,10 +24,6 @@
       href="/favicon/favicon-16x16.png"
     />
     <link rel="manifest" href="/favicon/site.webmanifest" />
-    <!-- swiper -->
-    <link rel="stylesheet" href="/node_modules/swiper/swiper-bundle.min.css" />
-    <!-- styles -->
-    <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
     <!-- header -->
@@ -324,7 +320,7 @@
       <!-- main -->
       <section class="slider">
         <!-- Swiper -->
-        <div class="swiper mySwiper">
+        <div class="swiper mySwiper1">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="swiper-slide-container">
@@ -857,26 +853,7 @@
       </div>
     </footer>
     <!-- scripts -->
-    <script src="/js/supp.js"></script>
-    <script src="/node_modules/swiper/swiper-bundle.min.js"></script>
-
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        spaceBetween: 0,
-        centeredSlides: true,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-    </script>
+  
+    <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>
