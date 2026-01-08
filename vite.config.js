@@ -5,5 +5,13 @@ export default defineConfig({
     port: 5173,
     strictPort: false,
     host: true
+  },
+  build: {
+    rollupOptions: {
+      input: {
+        main: 'index.html',
+        shoppincart: 'shoppingcart.html',
+      }
+    }
   }
 })
