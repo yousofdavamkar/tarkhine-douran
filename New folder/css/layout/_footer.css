@@ -1,0 +1,130 @@
+.footer {
+  background: #222b1e url("/images/Footer.jpg") no-repeat center top / cover;
+  box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 0;
+}
+
+.footer .container {
+  padding: var(--spacing-32) 0 34px;
+  display: flex;
+  gap: 128px;
+  position: relative;
+}
+
+.footer__title {
+  color: var(--color-neutral-white);
+}
+
+.footer__nav {
+  margin-top: var(--spacing-16);
+  color: var(--color-neutral-gray-3);
+  padding-inline-start: 12px;
+}
+
+@supports not (padding-inline-start: 12px) {
+  html[dir="rtl"] .footer__nav {
+    padding-right: 12px;
+  }
+
+  .footer__nav {
+    padding-left: 12px;
+  }
+}
+
+.footer__nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-16);
+}
+
+.footer__socials-list {
+  display: flex;
+  gap: 18px;
+}
+
+.footer__form {
+  margin-top: var(--spacing-16);
+}
+
+.footer__form-content {
+  display: flex;
+  gap: 26px;
+  padding-inline-start: 12px;
+}
+
+@supports not (padding-inline-start: 12px) {
+  html[dir="rtl"] .footer__form-content {
+    padding-right: 12px;
+  }
+
+  .footer__form-content {
+    padding-left: 12px;
+  }
+}
+
+.footer__form-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer__input {
+  width: 276px;
+  height: var(--spacing-40);
+  padding-inline-start: var(--spacing-16);
+}
+
+@supports not (padding-inline-start: 16px) {
+  html[dir="rtl"] .footer__input {
+    padding-right: var(--spacing-16);
+  }
+
+  .footer__input {
+    padding-left: var(--spacing-16);
+  }
+}
+
+.footer__textarea {
+  width: 286px;
+  height: 144px;
+  padding: var(--spacing-16);
+  resize: none;
+}
+
+/* psudeo element selector */
+.footer__input::placeholder,
+.footer__textarea::placeholder {
+  color: var(--color-neutral-gray-1);
+}
+
+.footer__submit {
+  width: 184px;
+  height: 40px;
+  padding: 0 62px;
+  font-size: 14px;
+  font-weight: 500;
+  display: block;
+  margin-inline-start: auto;
+  margin-top: 28px;
+}
+
+@supports not (margin-inline-start: auto) {
+  html[dir="rtl"] .footer__submit {
+    margin-right: auto;
+  }
+
+  .footer__submit {
+    margin-left: auto;
+  }
+}
