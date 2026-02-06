@@ -1,0 +1,83 @@
+.position {
+  display: flex;
+  flex-direction: row; /* Reverse the arrangement */
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  position: absolute;
+  width: 731px;
+  height: 40px;
+  left: calc(50% - 731px / 2 - 0.5px);
+  top: 155px;
+}
+
+/* Button Styles */
+.position .button {
+  fill:  #CBCBCB;
+
+  display: flex;
+  flex-direction: row; /* Ensure icons appear first */
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  gap: 4px;
+  width: auto;
+  height: 40px;
+  border-radius: 4px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* Text Styles */
+.position .button .text {
+  font-family: 'Estedad-VF', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 180%;
+  text-transform: capitalize;
+  color: #CBCBCB;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+/* Icon Styles */
+.position .button .icon {
+  width: 24px;
+  height: 24px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* Added a new rule for the icon class */
+.icon {
+    fill: #CBCBCB;
+    
+}
+
+.position .line ,.line-fill {
+  width: 100%;
+  height: 0;
+  border-top: 1px dashed #CBCBCB;
+}
+
+.line-fill{
+    width: 50%;
+  height: 0;
+  border-top: 1px dashed #417F56;
+
+}
+.icon-fill{
+
+
+  width: 24px;
+  height: 24px;
+  flex: none;
+fill: #417F56;
+
+
+
+}

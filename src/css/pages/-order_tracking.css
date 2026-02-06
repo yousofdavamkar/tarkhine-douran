@@ -1,0 +1,35 @@
+.basket_food{padding-bottom: 48px;  
+   
+     height: 100%; /* Ensure it takes full height */
+    box-sizing: border-box; /* Include padding and border in height calculation */
+    display: flex; /* Allow flexible child alignment */
+    flex-direction: column; /* Stack children vertically */
+    direction: ltr; /* Set text and layout direction to left-to-right */
+justify-content: center;
+align-items: center;
+}
+
+.food_item {
+    box-sizing: border-box;
+    width: 704px;
+    height: 554px;
+    position: absolute; /* Changed from absolute to relative */
+    right: 108px; /* Consider adjusting or removing this if not needed */
+    top: 235px; /* Consider adjusting or removing this if not needed */
+  border: 1px solid #CBCBCB;
+    background: #FFFFFF;
+  
+    border-radius: 8px;
+    overflow-y: auto; 
+    overflow-x: hidden;
+}
+.menu_card{
+    margin: 0 auto;
+    margin-bottom:16px;
+}
+
+.scrollbar {
+    width: 11px;
+    height: 438px;
+}
+
