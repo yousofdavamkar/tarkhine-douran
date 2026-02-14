@@ -18,9 +18,9 @@
 @import url('/src/css/components/_slider.css');
 @import url('/src/css/components/_dropdown.css');
 @import url('/src/css/components/_modal.css');
-@import url('/src/css/components/-stare.css');
-@import url('/src/css/components/-chips-list.css');
-@import url('/src/css/components/-menu_card.css');
+@import url('/src/css/components/_stare.css');
+@import url('/src/css/components/_chips-list.css');
+@import url('/src/css/components/_menu-card.css');
 @import url('/src/css/components/_position.css');
 /* Layout styles */
 @import url('/src/css/layout/_footer.css');
@@ -30,6 +30,6 @@
 
 /* Page-specific styles */
 @import url('/src/css/pages/_home.css');
-@import url("/src/css/pages/-order_tracking.css");
+@import url("/src/css/pages/_order-tracking.css");
 /* Vendor styles */
 @import url('/src/css/vendor/_swiper.css');

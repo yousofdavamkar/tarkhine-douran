@@ -38,29 +38,61 @@
   background: var(--color-neutral-white);
   border: 1px solid var(--color-neutral-gray-4);
   border-radius: var(--radius-8);
+  padding: 24px;
 }
 .row{
+ 
   width: 448px;
 display: flex;
-justify-content: space-between;
+justify-content:space-between;
 margin-bottom: 12px;
 padding-bottom:12px ;
   
 }
-
+.warning_container{
+  display: flex;
+justify-content: start;
+gap: 8px;
+margin-bottom: 12px;
+padding-bottom:12px ;
+  
+}
 
 .factor_trash{
   
   width: var(--spacing-24);
   height: var(--spacing-24);
 }
+.warning_icon{
 
+  width: var(--spacing-24);
+  height: var(--spacing-24);
+
+  border-radius: var(--radius-4);
+}
+.warning_icon svg {
+  fill: #A9791C;
+;
+}
+
+.warning_text{
+  text-align: justify;
+width: 416px;
+height: 36px;
+font-size: 10.5px;
+line-height: 180%;
+
+color: #A9791C;
+}
 .factor_price{
 display: flex;
 flex-direction: row;
 gap: 4px;
 color: #717171;
 
+}
+.total{
+  color: #417F56;
 }
 .basket_food_item::-webkit-scrollbar {
     width: 11px; 
