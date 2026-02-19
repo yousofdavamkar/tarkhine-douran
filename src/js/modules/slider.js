@@ -4,7 +4,6 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import "/src/js/supp.js";
 import "/src/css/styles.css";
 
 var swiper1 = new Swiper(".mySwiper1", {
