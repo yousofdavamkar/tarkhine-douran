@@ -1,0 +1,29 @@
+.star{
+position: absolute;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+
+border-radius: 5px;
+ stroke-width:0.8;
+
+ right: 201px;
+top: 112px;
+
+}
+.star_notactive{
+width: 24px;
+height: 24px;
+
+fill: none;
+ stroke :#F4B740;
+}
+.star_active{
+width: 24px;
+height: 24px;
+
+fill: #F4B740;
+ stroke :#F4B740;
+}
+

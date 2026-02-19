@@ -1,0 +1,88 @@
+.position {
+  display: flex;
+  flex-direction: row; /* Reverse the arrangement */
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  position: absolute;
+  width: 731px;
+  height: var(--spacing-40);
+  left: calc(50% - 731px / 2 - 0.5px);
+  top: 155px;
+}
+
+/* Button Styles */
+.position .button {
+  fill:  var(--color-neutral-gray-4);
+
+  display: flex;
+  flex-direction: row; /* Ensure icons appear first */
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-8);
+  gap: 4px;
+  width: auto;
+  height: var(--spacing-40);
+  border-radius: var(--radius-4);
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* Text Styles */
+.text {
+  font-family: var(--font-family-base);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 180%;
+  text-transform: capitalize;
+  color: var(--color-neutral-gray-4);
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+/* Icon Styles */
+.position .button .icon {
+  width: var(--spacing-24);
+  height: var(--spacing-24);
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* Added a new rule for the icon class */
+.icon {
+    fill: var(--color-neutral-gray-4);
+    
+}
+
+.position .line ,.line-fill {
+  width: 100%;
+  height: 0;
+  border-top: 1px dashed var(--color-neutral-gray-4);
+}
+
+.line-fill{
+    width: 50%;
+  height: 0;
+  border-top: 1px dashed var(--color-primary);
+
+}
+.icon-fill {
+  width: var(--spacing-24);
+  height: var(--spacing-24);
+  flex: none;
+fill: var(--color-primary);
+
+}
+.t-act{
+color:var(--color-primary);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 180%;
+  
+
+ }

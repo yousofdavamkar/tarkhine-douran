@@ -1,0 +1,125 @@
+.menu_card {
+  direction: ltr;
+  position: relative;
+  display: flex;
+  background: var(--color-neutral-white);
+  border: 1px solid var(--color-neutral-gray-4);
+  border-radius: var(--radius-8);
+  width: 656px;
+  height: 158px;
+  top: 24px;
+  padding-bottom: 16px;
+  margin: 0 auto;
+}
+
+.menu_card__image {
+  position: absolute;
+  width: 169px;
+  height: 100%;
+  right: 0;
+  top: 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.menu_card__title {
+  position: absolute;
+  top: 16px;
+  left: 192px;
+  width: 263px;
+  height: 36px;
+  text-align: end;
+  font-size: 20px;
+}
+
+.menu_card__recipe {
+  position: absolute;
+  width: 295px;
+  height: 50px;
+  top: 54px;
+  left: 160px;
+  font-weight: 400;
+  text-align: end;
+}
+
+.menu_card__btn--increase,
+.menu_card__number,
+.menu_card__btn--decrease {
+  width: 9px;
+  height: 25px;
+  text-align: center;
+  color: var(--color-primary);
+}
+
+.menu_card__actions {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0 var(--spacing-8);
+  gap: var(--spacing-8);
+  width: 5.5rem;
+  height: 3.2rem;
+  left: 261px;
+  bottom: 16px;
+  background: var(--color-primary-tint-1);
+  border: 1px solid var(--color-primary-tint-1);
+  border-radius: var(--radius-4);
+}
+
+.menu_card__quantity {
+  width: 0.9rem;
+  height: 2.5rem;
+}
+
+.trash {
+  position: absolute;
+  width: var(--spacing-24);
+  height: var(--spacing-24);
+  left: 16px;
+  top: 14px;
+}
+
+.discount_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--spacing-8);
+  position: absolute;
+  width: 103px;
+  height: 29px;
+  left: 16px;
+  bottom: 56px;
+}
+
+.menu_card__price-value {
+  width: 53px;
+  height: 29px;
+  text-align: right;
+  text-decoration: line-through;
+  color: var(--color-neutral-gray-5);
+}
+
+.menu_card__price-quantity {
+  width: var(--spacing-32);
+  height: 19px;
+  background: var(--color-status-error-extra-light);
+  border-radius: var(--radius-8);
+  font-size: 12px;
+  line-height: 180%;
+  text-align: center;
+  color: var(--color-status-error);
+}
+
+.money {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: var(--color-neutral-gray-8);
+  gap: var(--spacing-8);
+  position: absolute;
+  width: 109px;
+  height: 36px;
+  left: 16px;
+  bottom: 16px;
+}
