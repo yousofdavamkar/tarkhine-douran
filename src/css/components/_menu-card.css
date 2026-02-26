@@ -9,7 +9,7 @@
   height: 158px;
   top: 24px;
   padding-bottom: 16px;
-  margin: 0 auto;
+  margin: 0 auto 15px;
 }
 
 .menu_card__image {
@@ -44,22 +44,26 @@
 .menu_card__btn--increase,
 .menu_card__number,
 .menu_card__btn--decrease {
-  width: 9px;
-  height: 25px;
   text-align: center;
+  width: 11px;
+  height: 36px;
+  font-size: 16px;
   color: var(--color-primary);
+  
+  
+
 }
 
 .menu_card__actions {
   position: absolute;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 0 var(--spacing-8);
-  gap: var(--spacing-8);
-  width: 5.5rem;
-  height: 3.2rem;
+align-items: center;
+justify-content: center;
+
+ gap: 4px;
+ 
+  width: 55px;
+  height: 32px;
   left: 261px;
   bottom: 16px;
   background: var(--color-primary-tint-1);
@@ -122,4 +126,73 @@
   height: 36px;
   left: 16px;
   bottom: 16px;
+}
+
+/* Mobile: show only title and price */
+@media screen and (max-width: 40em) {
+  .menu_card {
+    border: none;
+    width: 261px;
+    height: 55px;
+    top: 0;
+    margin: 0 auto;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .menu_card__image,
+  .menu_card__recipe,
+  .star,
+  .trash,
+  .menu_card__price-quantity,.menu_card__price-value {
+    display: none;
+  }
+
+  .menu_card__actions {
+    font-size: 14px;
+    position: static;
+    width: 56px;
+    height: 32px;
+    padding-right: 4px;
+    padding-left: 4px;
+
+    gap: 8px;
+
+  }
+.menu_card__btn--increase,
+.menu_card__number,
+.menu_card__btn--decrease {
+  font-size: 14px;
+  width: 9px;
+  height: 25px;
+  text-align: center;
+  color: var(--color-primary);
+}
+  .menu_card__title {
+    top: 8px;
+    position: absolute;
+    width: auto;
+    height: auto;
+    text-align: start;
+    font-size: 14px;
+  }
+
+  .money {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: var(--color-neutral-gray-8);
+  gap: var(--spacing-8);
+  position: absolute;
+  width: 109px;
+  height: 36px;
+  left: 193px;
+  bottom: 7px;
+  }
+
+  .menu_card__price-value {
+    text-decoration: none;
+  }
 }

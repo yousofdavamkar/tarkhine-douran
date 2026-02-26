@@ -86,3 +86,9 @@ color:var(--color-primary);
   
 
  }
+ @media screen and (max-width: 48em) {
+ .position{
+
+  display: none;
+}
+ }
