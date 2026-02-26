@@ -4,23 +4,27 @@ const menuEL = document.getElementById("menu");
 
 const menusCall = new ApiCall("/menus?isActive=true");
 
-const {
-  data: {
-    data: { items },
-  },
-} = await menusCall.get();
-
-items.forEach(async (item) => {
-  let template;
-  if (item.hasSubmenu) {
-    const subMenusCall = new ApiCall("/menus");
+const menu = async () => {
+  try {
     const {
       data: {
-        data: { submenus },
+        data: { items },
       },
-    } = await subMenusCall.get(item.id);
+    } = await menusCall.get();
 
-    template = `
+    menuEL.innerHTML = "";
+
+    items.forEach(async (item) => {
+      let template;
+      if (item.hasSubmenu) {
+        const subMenusCall = new ApiCall("/menus");
+        const {
+          data: {
+            data: { submenus },
+          },
+        } = await subMenusCall.get(item.id);
+
+        template = `
 <li class="site-header__nav-item site-header__nav-item--active">
     <a class="site-header__nav-link ${
       item.hasSubmenu ? "site-header__nav-link--has-dropdown" : ""
@@ -73,8 +77,8 @@ items.forEach(async (item) => {
     }
 </li>
 `;
-  } else {
-    template = `
+      } else {
+        template = `
 <li class="site-header__nav-item site-header__nav-item--active">
     <a class="site-header__nav-link ${
       item.hasSubmenu ? "site-header__nav-link--has-dropdown" : ""
@@ -102,7 +106,11 @@ items.forEach(async (item) => {
     </a>
 </li>
 `;
-  }
+      }
 
-  menuEL.insertAdjacentHTML("beforeend", template);
-});
+      menuEL.insertAdjacentHTML("beforeend", template);
+    });
+  } catch (e) {}
+};
+
+export default menu;
