@@ -180,7 +180,7 @@
     margin-top: 120px;
     padding: var(--spacing-16);
     gap: var(--spacing-16);
-    border: #c72e2e solid 1px;
+  
   }
   .row_titel {
     position: relative;
