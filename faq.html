@@ -111,7 +111,9 @@
             </div>
             <ul class="site-header__nav-list body-xl">
               <li class="site-header__nav-item site-header__nav-item--active">
-                <a class="site-header__nav-link" href="">صفحه اصلی</a>
+                <a class="site-header__nav-link" href="/index.html"
+                  >صفحه اصلی</a
+                >
               </li>
               <li class="site-header__nav-item">
                 <a
@@ -327,7 +329,46 @@
       </div>
     </div>
     <!-- main -->
-    <main></main>
+    <main>
+      <section class="faq-hero">
+        <div class="faq-container">
+          <div class="faq__content">
+            <h2 class="faq__title">سوالات متداول از ترخینه</h2>
+          </div>
+        </div>
+      </section>
+      <!-- tab section-->
+      <section class="faq-tab-section">
+        <nav class="faq-tab-bar">
+          <div class="container">
+            <ul>
+              <li class="faq-tab-item active">
+                <a href="/faq.html">سوالات متداول</a>
+                <!-- برای خط زیر تب فعال -->
+                <div class="tab-indicator"></div>
+              </li>
+
+              <li class="faq-tab-item body-xl">
+                <a href="#">قوانین ترخینه</a>
+                <!-- صفحه مربوط به قوانین ترخینه لینکش اینجا قرار گیرد -->
+              </li>
+              <li class="faq-tab-item body-xl">
+                <a href="#">حریم خصوصی</a>
+                <!-- صفحه مربوط به حریم خصوصی لینکش اینجا قرار گیرد -->
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <!-- محتوای مربوط به هر تب سوالات متداول -->
+        <div class="container">
+          <div id="faq" class="faq-tab-content">
+            <h2>سوالات متداول</h2>
+            <!-- محتوای سوالات متداول -->
+          </div>
+        </div>
+      </section>
+    </main>
     <!-- footer -->
     <footer class="footer">
       <div class="container">
