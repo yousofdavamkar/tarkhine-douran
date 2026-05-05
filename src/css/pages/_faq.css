@@ -31,7 +31,7 @@
   border-bottom: 1px solid #e0e0e0; /* خط پایینی */
   position: relative; /* برای موقعیت‌دهی خط زیر تب */
   overflow: hidden; /* برای جلوگیری از بیرون زدن محتوا */
-  margin-bottom: 20px; /* فاصله از محتوای پایین */
+  margin-bottom: var(--spacing-24); /* فاصله از محتوای پایین */
 }
 
 .faq-tab-bar ul {
@@ -71,4 +71,76 @@
   width: 128px; /* این مقدار با جاوا اسکریپت تنظیم می‌شود */
   height: 2px; /* ضخامت خط */
   background-color: var(--color-primary); /* رنگ خط (سبز تیره) */
+}
+
+.faq-accordion-container {
+  background-color: var(--color-neutral-white);
+  border: 1px solid #e0e0e0;
+  border-radius: var(--radius-8);
+  overflow: hidden;
+  margin-bottom: var(--spacing-48);
+}
+
+.faq-accordion-item {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.faq-accordion-item:last-child {
+  border-bottom: none;
+}
+
+.faq-accordion-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 16px;
+  margin: 0px 0px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.faq-accordion-question:hover {
+  background-color: #f9f9f9;
+}
+
+.faq-accordion-icon {
+  flex-shrink: 0;
+  color: var(--color-neutral-gray-8);
+  transition: transform 0.3s ease;
+}
+
+.faq-accordion-item:hover .faq-accordion-question .accordion-p-question {
+  color: var(--color-primary);
+}
+.faq-accordion-item:hover .faq-accordion-question .faq-accordion-icon {
+  color: var(--color-primary);
+}
+
+.faq-accordion-item.active .faq-accordion-icon {
+  transform: rotate(180deg);
+  color: var(--color-primary);
+}
+
+.faq-accordion-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.3s ease,
+    padding 0.3s ease;
+}
+
+.faq-accordion-item.active .faq-accordion-answer {
+  max-height: 500px;
+  padding: 0px 12px;
+  margin: 1px 16px 16px 16px;
+  background: var(--color-neutral-white);
+}
+
+.faq-accordion-item.active .faq-accordion-question .accordion-p-question {
+  color: var(--color-primary);
+}
+
+.faq-accordion-answer p {
+  color: var(--color-neutral-gray-7);
+  text-align: justify;
 }
