@@ -116,7 +116,7 @@
   color: var(--color-primary);
 }
 
-.faq-accordion-item.active .faq-accordion-icon {
+.faq-accordion-item.open .faq-accordion-icon {
   transform: rotate(180deg);
   color: var(--color-primary);
 }
@@ -129,14 +129,14 @@
     padding 0.3s ease;
 }
 
-.faq-accordion-item.active .faq-accordion-answer {
+.faq-accordion-item.open .faq-accordion-answer {
   max-height: 500px;
   padding: 0px 12px;
   margin: 1px 16px 16px 16px;
   background: var(--color-neutral-white);
 }
 
-.faq-accordion-item.active .faq-accordion-question .accordion-p-question {
+.faq-accordion-item.open .faq-accordion-question .accordion-p-question {
   color: var(--color-primary);
 }
 

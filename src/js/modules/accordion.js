@@ -1,21 +1,57 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const faqItems = document.querySelectorAll(".faq-accordion-item");
+import ApiCall from "/src/js/utils/ApiCall.js";
 
-  faqItems.forEach((item) => {
-    const question = item.querySelector(".faq-accordion-question");
+// ساخت نمونه API برای endpoint faqs
+const faqApi = new ApiCall("faqs");
 
-    question.addEventListener("click", () => {
-      const isActive = item.classList.contains("active");
+// گرفتن دیتای FAQها و ایجاد HTML
+async function loadFaqs() {
+  const container = document.querySelector(".faq-accordion-container");
 
-      // بستن همه آیتم‌های باز
-      faqItems.forEach((otherItem) => {
-        otherItem.classList.remove("active");
-      });
+  const res = await faqApi.get(); // GET /faqs
 
-      // اگر آیتم کلیک شده قبلاً باز نبود، آن را باز کن
-      if (!isActive) {
-        item.classList.add("active");
-      }
+  const faqs = res.data; // آرایه‌ی داخلی
+
+  faqs.forEach((faq) => {
+    const item = document.createElement("div");
+    item.classList.add("faq-accordion-item");
+
+    item.innerHTML = `
+  
+              <div class="faq-accordion-question">
+                <p class="accordion-p-question body-xl">
+                 ${faq.question}
+                </p>
+                <svg
+                  class="faq-accordion-icon"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M6 9L12 15L18 9"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="faq-accordion-answer">
+                <p class="body-md">
+                 ${faq.answer}
+                </p>
+              </div>
+            
+    
+    `;
+    // آکاردئون (چند تا بتوانند باز باشند)
+    item.addEventListener("click", () => {
+      item.classList.toggle("open");
     });
+
+    container.appendChild(item);
   });
-});
+}
+
+// اجرای تابع
+loadFaqs();
