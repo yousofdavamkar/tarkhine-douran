@@ -329,38 +329,42 @@
       </div>
     </div>
     <!-- main -->
-    <main>
-      <section class="faq-hero">
-        <div class="faq-container">
+    <main class="faq">
+      <!-- hero -->
+      <section class="faq__hero">
+        <div class="faq__container">
           <div class="faq__content">
             <h2 class="faq__title">سوالات متداول از ترخینه</h2>
           </div>
         </div>
       </section>
-      <!-- tab section-->
-      <section class="faq-tab-section">
-        <nav class="faq-tab-bar">
-          <div class="container">
-            <ul>
-              <li class="faq-tab-item active">
-                <a href="/faq.html">سوالات متداول</a>
+
+      <!-- tab section -->
+      <section class="faq__tabs">
+        <nav class="faq__tab-bar">
+          <div class="faq__container container">
+            <ul class="faq__tab-list">
+              <li class="faq__tab-item active">
+                <a class="faq__tab-link" href="/faq.html">سوالات متداول</a>
                 <!-- برای خط زیر تب فعال -->
-                <div class="tab-indicator"></div>
+                <div class="faq__tab-indicator"></div>
               </li>
 
-              <li class="faq-tab-item body-xl">
-                <a href="#">قوانین ترخینه</a>
+              <li class="faq__tab-item">
+                <a class="faq__tab-link" href="#"> قوانین ترخینه </a>
                 <!-- صفحه مربوط به قوانین ترخینه لینکش اینجا قرار گیرد -->
               </li>
-              <li class="faq-tab-item body-xl">
-                <a href="#">حریم خصوصی</a>
+
+              <li class="faq__tab-item">
+                <a class="faq__tab-link" href="#"> حریم خصوصی </a>
                 <!-- صفحه مربوط به حریم خصوصی لینکش اینجا قرار گیرد -->
               </li>
             </ul>
           </div>
         </nav>
-        <div class="container">
-          <div class="faq-accordion-container">
+
+        <div class="faq__container container">
+          <div class="faq__accordion">
             <!-- FAQ list will be inserted dynamically by JS -->
           </div>
         </div>

@@ -1,4 +1,5 @@
-.faq-hero {
+/* xxl */
+.faq__hero {
   background: #21402b url("/images/faq-image.webp") no-repeat center center /
     cover;
   text-align: center;
@@ -7,7 +8,7 @@
   height: 336px;
 }
 
-.faq-hero::before {
+.faq__hero::before {
   content: "";
   position: absolute;
   top: 0;
@@ -18,7 +19,7 @@
   z-index: 0;
 }
 
-.faq-hero .faq-container {
+.faq__hero .faq__container {
   padding: var(--spacing-32) 0 34px;
   top: 50%;
   left: 50%;
@@ -26,54 +27,57 @@
   position: relative;
 }
 
-.faq-tab-bar {
-  background-color: var(--color-neutral-gray-3); /* رنگ پس‌زمینه کلی تب بار */
-  border-bottom: 1px solid #e0e0e0; /* خط پایینی */
-  position: relative; /* برای موقعیت‌دهی خط زیر تب */
-  overflow: hidden; /* برای جلوگیری از بیرون زدن محتوا */
-  margin-bottom: var(--spacing-24); /* فاصله از محتوای پایین */
+.faq__tab-bar {
+  background-color: var(--color-neutral-gray-3);
+  border-bottom: 1px solid #e0e0e0;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: var(--spacing-24);
 }
 
-.faq-tab-bar ul {
+.faq__tab-bar ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex; /* برای چیدمان افقی آیتم‌ها */
+  display: flex;
 }
 
-.faq-tab-item {
+.faq__tab-item {
   margin-left: 32px;
   height: 64px;
   display: flex;
   align-items: center;
   cursor: pointer;
-  transition: color 0.3s ease; /* انیمیشن تغییر رنگ */
-  position: relative; /* برای خط زیر تب */
+  transition: color 0.3s ease;
+  position: relative;
   color: var(--color-neutral-gray-7);
+  font-size: 2rem;
+  line-height: 1.8;
+  font-weight: 400;
 }
 
-.faq-tab-item a {
+.faq__tab-item a {
   text-decoration: none;
   color: inherit;
 }
 
-.faq-tab-item.active {
+.faq__tab-item.active {
   color: var(--color-primary);
   font-size: 2rem;
   font-weight: bold;
   line-height: 1.8;
 }
 
-.tab-indicator {
+.faq__tab-indicator {
   position: absolute;
   bottom: 0;
-  right: 0; /* این مقدار با جاوا اسکریپت تنظیم می‌شود */
-  width: 128px; /* این مقدار با جاوا اسکریپت تنظیم می‌شود */
-  height: 2px; /* ضخامت خط */
-  background-color: var(--color-primary); /* رنگ خط (سبز تیره) */
+  right: 0;
+  width: 128px;
+  height: 2px;
+  background-color: var(--color-primary);
 }
 
-.faq-accordion-container {
+.faq__accordion {
   background-color: var(--color-neutral-white);
   border: 1px solid #e0e0e0;
   border-radius: var(--radius-8);
@@ -81,15 +85,15 @@
   margin-bottom: var(--spacing-48);
 }
 
-.faq-accordion-item {
+.faq__accordion-item {
   border-bottom: 1px solid #e0e0e0;
 }
 
-.faq-accordion-item:last-child {
+.faq__accordion-item:last-child {
   border-bottom: none;
 }
 
-.faq-accordion-question {
+.faq__accordion-question {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -97,31 +101,39 @@
   margin: 0px 0px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-size: 2rem;
+  line-height: 1.8;
+  font-weight: 400;
 }
-
-.faq-accordion-question:hover {
+.faq__accordion-icon {
+  width: 32px;
+  height: 32px;
+}
+.faq__accordion-question:hover {
   background-color: #f9f9f9;
 }
 
-.faq-accordion-icon {
+.faq__accordion-icon {
   flex-shrink: 0;
   color: var(--color-neutral-gray-8);
   transition: transform 0.3s ease;
 }
 
-.faq-accordion-item:hover .faq-accordion-question .accordion-p-question {
+.faq__accordion-item:hover
+  .faq__accordion-question
+  .faq__accordion-question-text {
   color: var(--color-primary);
 }
-.faq-accordion-item:hover .faq-accordion-question .faq-accordion-icon {
+.faq__accordion-item:hover .faq__accordion-question .faq__accordion-icon {
   color: var(--color-primary);
 }
 
-.faq-accordion-item.open .faq-accordion-icon {
+.faq__accordion-item.open .faq__accordion-icon {
   transform: rotate(180deg);
   color: var(--color-primary);
 }
 
-.faq-accordion-answer {
+.faq__accordion-answer {
   max-height: 0;
   overflow: hidden;
   transition:
@@ -129,18 +141,75 @@
     padding 0.3s ease;
 }
 
-.faq-accordion-item.open .faq-accordion-answer {
+.faq__accordion-item.open .faq__accordion-answer {
   max-height: 500px;
   padding: 0px 12px;
   margin: 1px 16px 16px 16px;
   background: var(--color-neutral-white);
 }
 
-.faq-accordion-item.open .faq-accordion-question .accordion-p-question {
+.faq__accordion-item.open
+  .faq__accordion-question
+  .faq__accordion-question-text {
   color: var(--color-primary);
 }
 
-.faq-accordion-answer p {
+.faq__accordion-answer p {
   color: var(--color-neutral-gray-7);
   text-align: justify;
+}
+
+/* md */
+@media screen and (max-width: 64em) {
+  .faq__hero {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .faq__hero {
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 40em) {
+  .faq__hero {
+    background-position: 70% 0;
+    height: 176px;
+  }
+  .faq__tab-item {
+    margin-left: 16px;
+    height: 40px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.8;
+  }
+  .faq__tab-item.active {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.8;
+  }
+  .faq__tab-indicator {
+    width: 89px;
+    height: 1px;
+  }
+  .faq__accordion {
+    border-radius: var(--radius-4);
+  }
+  .faq__accordion-question {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.8;
+    padding: 8px 16px;
+  }
+  .faq__accordion-icon {
+    width: 16px;
+    height: 16px;
+  }
+  .faq__accordion-answer-text.body-md {
+    font-size: 10px;
+  }
+  .faq__accordion-item.open .faq__accordion-answer {
+    margin: 1px 16px 8px 16px;
+  }
 }
