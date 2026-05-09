@@ -33,5 +33,6 @@
 @import url("/src/css/pages/_order-tracking.css");
 @import url("/src/css/pages/_faq.css");
 @import url("/src/css/pages/_Terms&Conditions.css");
+@import url("/src/css/pages/_privacy.css");
 /* Vendor styles */
 @import url("/src/css/vendor/_swiper.css");

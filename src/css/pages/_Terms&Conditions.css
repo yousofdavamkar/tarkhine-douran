@@ -5,3 +5,21 @@
 .TermsAndConditions__tab-indicator {
   width: 115px !important;
 }
+
+@media screen and (max-width: 64em) {
+  .TermsAndConditions__tab-indicator {
+    width: 105px !important;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .TermsAndConditions__tab-indicator {
+    width: 90px !important;
+  }
+}
+
+@media screen and (max-width: 40em) {
+  .TermsAndConditions__tab-indicator {
+    width: 77px !important;
+  }
+}

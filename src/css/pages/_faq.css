@@ -167,11 +167,19 @@
   .faq__hero {
     height: 300px;
   }
+  .faq__tab-indicator {
+    width: 118px;
+    height: 1px;
+  }
 }
 
 @media screen and (max-width: 48em) {
   .faq__hero {
     height: 250px;
+  }
+  .faq__tab-indicator {
+    width: 103px;
+    height: 1px;
   }
 }
 
