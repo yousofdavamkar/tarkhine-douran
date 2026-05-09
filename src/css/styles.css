@@ -32,5 +32,6 @@
 @import url("/src/css/pages/_home.css");
 @import url("/src/css/pages/_order-tracking.css");
 @import url("/src/css/pages/_faq.css");
+@import url("/src/css/pages/_Terms&Conditions.css");
 /* Vendor styles */
 @import url("/src/css/vendor/_swiper.css");

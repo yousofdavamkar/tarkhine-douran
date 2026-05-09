@@ -331,7 +331,7 @@
     <!-- main -->
     <main class="faq">
       <!-- hero -->
-      <section class="faq__hero">
+      <section class="faq__hero faq__hero--alt">
         <div class="faq__container">
           <div class="faq__content">
             <h2 class="faq__title">سوالات متداول از ترخینه</h2>
@@ -345,26 +345,26 @@
           <div class="faq__container container">
             <ul class="faq__tab-list">
               <li class="faq__tab-item active">
-                <a class="faq__tab-link" href="/faq.html">سوالات متداول</a>
+                <a class="faq__tab-link" href="#">سوالات متداول</a>
                 <!-- برای خط زیر تب فعال -->
                 <div class="faq__tab-indicator"></div>
               </li>
 
               <li class="faq__tab-item">
-                <a class="faq__tab-link" href="#"> قوانین ترخینه </a>
-                <!-- صفحه مربوط به قوانین ترخینه لینکش اینجا قرار گیرد -->
+                <a class="faq__tab-link" href="/Terms&Conditions.html">
+                  قوانین ترخینه
+                </a>
               </li>
 
               <li class="faq__tab-item">
                 <a class="faq__tab-link" href="#"> حریم خصوصی </a>
-                <!-- صفحه مربوط به حریم خصوصی لینکش اینجا قرار گیرد -->
               </li>
             </ul>
           </div>
         </nav>
 
         <div class="faq__container container">
-          <div class="faq__accordion">
+          <div class="faq__accordion" data-accordion data-endpoint="faqs">
             <!-- FAQ list will be inserted dynamically by JS -->
           </div>
         </div>
@@ -381,7 +381,9 @@
                 <a class="footer__nav-link" href="/faq.html">پرسش‌های متداول</a>
               </li>
               <li class="footer__nav-item caption-lg">
-                <a class="footer__nav-link" href="">قوانین ترخینه</a>
+                <a class="footer__nav-link" href="/Terms&Conditions.html"
+                  >قوانین ترخینه
+                </a>
               </li>
               <li class="footer__nav-item caption-lg">
                 <a class="footer__nav-link" href="">حریم خصوصی</a>

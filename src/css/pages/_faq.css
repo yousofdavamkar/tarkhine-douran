@@ -1,11 +1,14 @@
 /* xxl */
 .faq__hero {
-  background: #21402b url("/images/faq-image.webp") no-repeat center center /
-    cover;
+  background: #21402b no-repeat center center / cover;
   text-align: center;
   color: var(--color-primary-tint-1);
   position: relative;
   height: 336px;
+}
+
+.faq__hero--alt {
+  background-image: url("/images/faq-image.webp");
 }
 
 .faq__hero::before {
