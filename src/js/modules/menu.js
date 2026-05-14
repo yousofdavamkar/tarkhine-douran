@@ -2,7 +2,11 @@ import ApiCall from "../utils/ApiCall";
 
 const menuEL = document.getElementById("menu");
 
-const menusCall = new ApiCall("/menus?isActive=true");
+try {
+  const menusCall = new ApiCall("/menus?isActive=true");
+} catch (error) {
+  console.log(error);
+}
 
 const menu = async () => {
   try {

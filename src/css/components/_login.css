@@ -1,0 +1,12 @@
+.modal-overlay {
+}
+
+.modal-overlay.hidden {
+  visibility: hidden;
+}
+
+.modal-box {
+}
+
+.modal-box-header {
+}
