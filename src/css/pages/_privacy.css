@@ -1,0 +1,25 @@
+.privacy__hero--alt {
+  background-image: url("/images/privacy_image.webp");
+}
+
+.privacy__tab-indicator {
+  width: 115px !important;
+}
+
+@media screen and (max-width: 64em) {
+  .privacy__tab-indicator {
+    width: 110px !important;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .privacy__tab-indicator {
+    width: 95px !important;
+  }
+}
+
+@media screen and (max-width: 40em) {
+  .privacy__tab-indicator {
+    width: 80px !important;
+  }
+}
