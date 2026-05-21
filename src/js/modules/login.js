@@ -34,12 +34,20 @@ export function initLoginModal() {
         <div class="modal-box-body">
             <!-- مرحله اول: ورود شماره موبایل -->
             <div id="step-phone-input" class="modal-step">
-                <p class="body-md">ورود / ثبت نام</p>
+                <p class="step-phone-input-title body-md">ورود / ثبت نام</p>
                 <p class="step-phone-input-subtitle">با وارد کردن شماره موبایل کد تاییدی برای شما ارسال خواهد شد.</p>
                 <div class="input-group">
-                  <label class="floating-label">شماره همراه</label>
-                  <input type="text" id="phone-input" placeholder="۰۹۱۴ ۸۶۴ ۳۳۵۰" maxlength="11" />
+                  <label class="floating-label caption-md">شماره همراه</label>
+                  <input class="body-md" type="text" id="phone-input" placeholder="۰۹۱۴ ۸۶۴ ۳۳۵۰" maxlength="11" />
                 </div>
+                <button id="submit-phone-btn" class="submit-btn button-lg" disabled>ادامه</button>
+                <p class="modal-footer-text caption-sm">
+                  ورود و عضویت در ترخینه به منزله قبول <a class="terms-text">قوانین و مقررات</a> است.
+                </p>
+            </div>
+            <div id="step-code-verification" class="modal-step hidden">
+                <p class="step-phone-input-title body-md">کد تایید</p>
+                <p id="subtitle-step-code-verification" class="step-phone-input-subtitle" >کد تایید پنج‌رقمی به شماره ... ارسال شد.</p>
             </div>
         </div>
     </div>
@@ -51,21 +59,75 @@ export function initLoginModal() {
   const overlay = document.getElementById("login-modal-overlay");
   const closeBtn = document.getElementById("close-modal_btn");
   const headerLoginBtn = document.getElementById("header-login-btn");
+  const backToPhoneBtn = document.getElementById("back-modal-to-phone_btn");
 
+  // مرحله 1
+  const phoneInputStep = document.getElementById("step-phone-input");
+  const phoneInput = document.getElementById("phone-input");
+  const submitPhoneBtn = document.getElementById("submit-phone-btn");
+
+  // مرحله 2
+  const codeVerificationStep = document.getElementById(
+    "step-code-verification",
+  );
+  const codeSentToNumberText = document.getElementById(
+    "subtitle-step-code-verification",
+  );
+
+  // فعال ساز مرحله اول
+  function showPhoneInputStep() {
+    codeVerificationStep.classList.add("hidden");
+    phoneInputStep.classList.remove("hidden");
+    backToPhoneBtn.classList.add("hidden");
+  }
+
+  // فعال ساز مرحله دوم
+  function showCodeVerificationStep(phoneNumber) {
+    phoneInputStep.classList.add("hidden");
+    codeVerificationStep.classList.remove("hidden");
+    backToPhoneBtn.classList.remove("hidden");
+    codeSentToNumberText.textContent = `کد تایید پنج‌رقمی به شماره ${phoneNumber} ارسال شد.`;
+  }
+
+  // open login modal
   if (headerLoginBtn) {
     headerLoginBtn.addEventListener("click", (e) => {
       e.preventDefault();
       overlay.classList.remove("hidden");
     });
   }
-
+  // modal cose btn
   closeBtn.addEventListener("click", (e) => {
     overlay.classList.add("hidden");
   });
-
+  // کلیک کردن در فضای خالی  برای بسته شدن modal.
   overlay.addEventListener("click", (e) => {
     if (e.target === overlay) {
       overlay.classList.add("hidden");
+    }
+  });
+
+  // active btn ادامه
+  phoneInput.addEventListener("input", (e) => {
+    e.target.value = e.target.value.replace(/[^0-9]/g, "").substring(0, 11);
+    if (e.target.value.length === 11 && e.target.value.startsWith("09")) {
+      submitPhoneBtn.removeAttribute("disabled");
+    } else {
+      submitPhoneBtn.setAttribute("disabled", "true");
+    }
+  });
+
+  // رویداد دکمه برگشت
+  backToPhoneBtn.addEventListener("click", (e) => {
+    showPhoneInputStep();
+  });
+
+  // رفتن به مرحله ارسال کد تایید
+  submitPhoneBtn.addEventListener("click", (e) => {
+    if (!submitPhoneBtn.disabled) {
+      const enteredPhoneNumber = phoneInput.value;
+      console.log(`شماره موبایل ارسال شد: ${enteredPhoneNumber}`);
+      showCodeVerificationStep(enteredPhoneNumber);
     }
   });
 }
