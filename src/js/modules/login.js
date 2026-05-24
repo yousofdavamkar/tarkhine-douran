@@ -16,9 +16,9 @@ export function initLoginModal() {
             </div>
             <div class="modal-box-header__brand">
                 <picture class="modal-box-header_logo">
-                    <source srcset="/images/Logo.webp" type="image/webp" />
-                    <source srcset="/images/Logo.png" type="image/png" />
-                    <img src="/images/Logo.png" alt="logo" />
+                     <!-- <source srcset="/images/Logo.webp" type="image/webp" />-->
+                    <!--  <source srcset="/images/Logo.png" type="image/png" />-->
+                    <!-- <img src="/images/Logo.png" alt="logo" /> -->
                 </picture>
             </div>
            <div class="place-holder_btn">
@@ -64,16 +64,16 @@ export function initLoginModal() {
                   <path d="M10.4731 10.6199C10.3864 10.6199 10.2998 10.5999 10.2198 10.5466L8.1531 9.31326C7.63977 9.00659 7.25977 8.33326 7.25977 7.73992V5.00659C7.25977 4.73326 7.48643 4.50659 7.75977 4.50659C8.0331 4.50659 8.25977 4.73326 8.25977 5.00659V7.73992C8.25977 7.97992 8.45977 8.33326 8.66643 8.45326L10.7331 9.68659C10.9731 9.82659 11.0464 10.1333 10.9064 10.3733C10.8064 10.5333 10.6398 10.6199 10.4731 10.6199Z" fill="#717171"/>
                   </svg>
                   <span id="countdown-timer" class="countdown-timer caption-md">۱:۵۹</span>
-                  <span class="caption-md">تا دریافت مجدد کد</span>
+                  <span class="timer-text caption-md">تا دریافت مجدد کد</span>
                   <a href="#" id="resend-code-link" class="link-text caption-md hidden">دریافت مجدد کد</a>
                 </div>
                 <a href="#" id="edit-phone-number-link" class="link-text caption-md ">ویرایش شماره</a>
               </div>
 
               <button id="submit-code-btn" class="submit-btn button-lg" disabled>ثبت کد</button>
-
             </div>
         </div>
+    </div>
     </div>
 
   `;
