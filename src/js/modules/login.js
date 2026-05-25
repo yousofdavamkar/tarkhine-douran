@@ -64,7 +64,7 @@ export function initLoginModal() {
                   <path d="M10.4731 10.6199C10.3864 10.6199 10.2998 10.5999 10.2198 10.5466L8.1531 9.31326C7.63977 9.00659 7.25977 8.33326 7.25977 7.73992V5.00659C7.25977 4.73326 7.48643 4.50659 7.75977 4.50659C8.0331 4.50659 8.25977 4.73326 8.25977 5.00659V7.73992C8.25977 7.97992 8.45977 8.33326 8.66643 8.45326L10.7331 9.68659C10.9731 9.82659 11.0464 10.1333 10.9064 10.3733C10.8064 10.5333 10.6398 10.6199 10.4731 10.6199Z" fill="#717171"/>
                   </svg>
                   <span id="countdown-timer" class="countdown-timer caption-md">۱:۵۹</span>
-                  <span class="timer-text caption-md">تا دریافت مجدد کد</span>
+                  <span id="timer-text" class="timer-text caption-md">تا دریافت مجدد کد</span>
                   <a href="#" id="resend-code-link" class="link-text caption-md hidden">دریافت مجدد کد</a>
                 </div>
                 <a href="#" id="edit-phone-number-link" class="link-text caption-md ">ویرایش شماره</a>
@@ -100,6 +100,13 @@ export function initLoginModal() {
   const codeInputs = document.querySelectorAll(".code-input");
   const submitCodeBtn = document.getElementById("submit-code-btn");
   const editPhoneNumberLink = document.getElementById("edit-phone-number-link");
+  const resendCodeLink = document.getElementById("resend-code-link");
+  const countdownTimerSpan = document.getElementById("countdown-timer");
+  const timerTextShow = document.getElementById("timer-text");
+
+  let currentPhoneNumber = "";
+  let countdownInterval;
+  let remainingTime = 0;
 
   // فعال ساز مرحله اول
   function showPhoneInputStep() {
@@ -107,6 +114,9 @@ export function initLoginModal() {
     phoneInputStep.classList.remove("hidden");
     backToPhoneBtn.classList.add("hidden");
     submitCodeBtn.setAttribute("disabled", "true");
+    stopCountdown();
+    clearCodeInputs();
+    phoneInput.focus();
   }
 
   // فعال ساز مرحله دوم
@@ -115,6 +125,8 @@ export function initLoginModal() {
     codeVerificationStep.classList.remove("hidden");
     backToPhoneBtn.classList.remove("hidden");
     codeSentToNumberText.textContent = `کد تایید پنج‌رقمی به شماره ${phoneNumber} ارسال شد.`;
+    currentPhoneNumber = phoneNumber;
+    startCountdown();
     codeInputs[0].focus();
   }
 
@@ -128,19 +140,18 @@ export function initLoginModal() {
     headerLoginBtn.addEventListener("click", (e) => {
       e.preventDefault();
       overlay.classList.remove("hidden");
+      showPhoneInputStep();
     });
   }
   // modal cose btn
   closeBtn.addEventListener("click", (e) => {
     overlay.classList.add("hidden");
-    clearCodeInputs();
     showPhoneInputStep();
   });
   // کلیک کردن در فضای خالی  برای بسته شدن modal.
   overlay.addEventListener("click", (e) => {
     if (e.target === overlay) {
       overlay.classList.add("hidden");
-      clearCodeInputs();
       showPhoneInputStep();
     }
   });
@@ -157,7 +168,6 @@ export function initLoginModal() {
 
   // رویداد دکمه برگشت
   backToPhoneBtn.addEventListener("click", (e) => {
-    clearCodeInputs();
     showPhoneInputStep();
   });
 
@@ -173,7 +183,6 @@ export function initLoginModal() {
   //تغییر شماره موبایل
   editPhoneNumberLink.addEventListener("click", (e) => {
     e.preventDefault();
-    clearCodeInputs();
     showPhoneInputStep();
   });
 
@@ -216,4 +225,58 @@ export function initLoginModal() {
       submitCodeBtn.setAttribute("disabled", "true");
     }
   }
+
+  // --- توابع مدیریت شمارش معکوس ---
+  function startCountdown() {
+    stopCountdown(); // اگر قبلاً تایمری در حال اجراست، متوقفش کن
+    remainingTime = 119; // 1 دقیقه و 59 ثانیه
+    timerTextShow.classList.remove("hidden");
+    resendCodeLink.classList.add("hidden");
+    updateCountdownDisplay();
+
+    countdownInterval = setInterval(() => {
+      remainingTime--;
+      updateCountdownDisplay();
+      if (remainingTime <= 0) {
+        stopCountdown();
+        timerTextShow.classList.add("hidden");
+        resendCodeLink.classList.remove("hidden");
+      }
+    }, 1000);
+  }
+
+  function stopCountdown() {
+    clearInterval(countdownInterval);
+  }
+
+  function updateCountdownDisplay() {
+    const minutes = Math.floor(remainingTime / 60);
+    const seconds = remainingTime % 60;
+    countdownTimerSpan.textContent = `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+  }
+
+  // کلیک روی "ثبت کد" (مرحله 2)
+  submitCodeBtn.addEventListener("click", () => {
+    if (!submitCodeBtn.disabled) {
+      let verificationCode = "";
+      codeInputs.forEach((input) => (verificationCode += input.value));
+      console.log(`کد تایید ارسال شد: ${verificationCode}`);
+      // اینجا می‌توانید کد را به سرور ارسال کنید
+      alert(
+        `کد ${verificationCode} برای شماره ${currentPhoneNumber} تایید شد! (این فقط یک پیام تستی است)`,
+      );
+      overlay.classList.add("hidden"); // بستن مودال بعد از تایید موفق
+      showPhoneInputStep(); // بازگشت به مرحله اول
+    }
+  });
+
+  // کلیک روی "دریافت مجدد کد" (مرحله 2)
+  resendCodeLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    console.log(`درخواست مجدد کد برای شماره ${currentPhoneNumber}`);
+    clearCodeInputs();
+    submitCodeBtn.setAttribute("disabled", "true");
+    startCountdown(); // شروع مجدد شمارش معکوس
+    codeInputs[0].focus();
+  });
 }
