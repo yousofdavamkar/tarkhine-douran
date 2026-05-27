@@ -35,7 +35,7 @@
 .modal-box-header_logo {
   width: 102px;
   height: 32px;
-  background-image: url(/public/images/Logo.png);
+  background-image: url(/images/Logo.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -214,7 +214,7 @@
     flex: 1;
   }
   .modal-box-header_logo {
-    background-image: url(/public/images/Logo-green.png);
+    background-image: url(/images/Logo-green.png);
     width: 148px;
     height: 71px;
   }

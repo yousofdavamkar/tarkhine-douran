@@ -1,3 +1,7 @@
+import ApiCall from "/src/js/utils/ApiCall.js";
+
+const usersApi = new ApiCall("users");
+
 export function initLoginModal() {
   if (document.getElementById("login-modal-overlay")) return;
 
@@ -16,9 +20,6 @@ export function initLoginModal() {
             </div>
             <div class="modal-box-header__brand">
                 <picture class="modal-box-header_logo">
-                     <!-- <source srcset="/images/Logo.webp" type="image/webp" />-->
-                    <!--  <source srcset="/images/Logo.png" type="image/png" />-->
-                    <!-- <img src="/images/Logo.png" alt="logo" /> -->
                 </picture>
             </div>
            <div class="place-holder_btn">
@@ -107,6 +108,7 @@ export function initLoginModal() {
   let currentPhoneNumber = "";
   let countdownInterval;
   let remainingTime = 0;
+  let generatedOtp = null;
 
   // فعال ساز مرحله اول
   function showPhoneInputStep() {
@@ -174,9 +176,12 @@ export function initLoginModal() {
   // رفتن به مرحله ارسال کد تایید
   submitPhoneBtn.addEventListener("click", (e) => {
     if (!submitPhoneBtn.disabled) {
-      const enteredPhoneNumber = phoneInput.value;
-      console.log(`شماره موبایل ارسال شد: ${enteredPhoneNumber}`);
-      showCodeVerificationStep(enteredPhoneNumber);
+      currentPhoneNumber = phoneInput.value;
+
+      generatedOtpCode();
+
+      console.log(`شماره موبایل ارسال شد: ${currentPhoneNumber}`);
+      showCodeVerificationStep(currentPhoneNumber);
     }
   });
 
@@ -220,7 +225,6 @@ export function initLoginModal() {
 
     if (allFilled) {
       submitCodeBtn.removeAttribute("disabled");
-      console.log("کد کامل:", fullCode); // اینجا می‌توانید کد کامل را برای ارسال به سرور داشته باشید
     } else {
       submitCodeBtn.setAttribute("disabled", "true");
     }
@@ -230,6 +234,7 @@ export function initLoginModal() {
   function startCountdown() {
     stopCountdown(); // اگر قبلاً تایمری در حال اجراست، متوقفش کن
     remainingTime = 119; // 1 دقیقه و 59 ثانیه
+    remainingTime = 10; // 1 دقیقه و 59 ثانیه
     timerTextShow.classList.remove("hidden");
     resendCodeLink.classList.add("hidden");
     updateCountdownDisplay();
@@ -256,27 +261,108 @@ export function initLoginModal() {
   }
 
   // کلیک روی "ثبت کد" (مرحله 2)
-  submitCodeBtn.addEventListener("click", () => {
+  submitCodeBtn.addEventListener("click", async () => {
     if (!submitCodeBtn.disabled) {
       let verificationCode = "";
       codeInputs.forEach((input) => (verificationCode += input.value));
-      console.log(`کد تایید ارسال شد: ${verificationCode}`);
-      // اینجا می‌توانید کد را به سرور ارسال کنید
-      alert(
-        `کد ${verificationCode} برای شماره ${currentPhoneNumber} تایید شد! (این فقط یک پیام تستی است)`,
-      );
-      overlay.classList.add("hidden"); // بستن مودال بعد از تایید موفق
-      showPhoneInputStep(); // بازگشت به مرحله اول
+
+      if (verificationCode !== generatedOtp) {
+        alert("کد وارد شده اشتباه است!");
+        clearCodeInputs();
+        return;
+      }
+
+      try {
+        console.log("Searching for:", JSON.stringify(currentPhoneNumber));
+        console.log("Searching for:", currentPhoneNumber);
+        // const filterEndpoint = `users?mobile=${currentPhoneNumber}`;
+        const filterEndpoint = `users/${currentPhoneNumber}`;
+
+        console.log("endpoint", filterEndpoint);
+
+        const filterApi = new ApiCall(filterEndpoint);
+
+        const response = await filterApi.get();
+
+        const users = response.data;
+
+        let currentUserData = null;
+
+        if (typeof response === "string") {
+          console.log("کاربر پیدا نشد، در حال ثبت‌ نام...");
+
+          const newUser = {
+            id: `${currentPhoneNumber}`,
+            mobile: currentPhoneNumber,
+            role: "user",
+            createdAt: new Date().toISOString(),
+          };
+
+          const postResponse = await usersApi.post(newUser);
+
+          if (postResponse.status === 201) {
+            console.log("کاربر جدید ثبت شد:", postResponse.data);
+            currentUserData = postResponse.data;
+          } else {
+            // اگر پست ناموفق بود، خطا می‌دهیم
+            throw new Error(
+              `ثبت نام کاربر ناموفق بود. وضعیت: ${postResponse.status}`,
+            );
+          }
+        }
+
+        console.log("پاسخ برگشته شده از سرور", users);
+        console.log(
+          "طول پاسخ برگشته شده از سرور ",
+          users && Object.keys(users).length > 0,
+        );
+
+        if (users && Object.keys(users).length > 0) {
+          console.log("کاربر پیدا شد (توسط سرور):", users);
+          currentUserData = users;
+        }
+        if (currentUserData) {
+          finalizeLogin(currentUserData);
+        } else {
+          // اگر به هر دلیلی currentUserData خالی ماند
+          alert("مشکلی در ثبت یا ورود کاربر رخ داد. لطفاً دوباره امتحان کنید.");
+        }
+      } catch (error) {
+        console.error("خطا در فرآیند ورود/ثبت نام:", error);
+        alert(`خطایی رخ داد: ${error.message} `);
+      }
     }
   });
+
+  // تابع نهایی سازی ورود
+  function finalizeLogin(userData) {
+    localStorage.setItem("currentUser", JSON.stringify(userData));
+    localStorage.setItem("isLoggedIn", "true");
+
+    alert(`خوش آمدید! کاربر با شماره ${userData.mobile} وارد شد.`);
+
+    overlay.classList.add("hidden");
+    showPhoneInputStep(); // ریست کردن فرم برای دفعه بعد
+
+    // در صورت نیاز به رفرش یا تغییر هدر:
+    window.location.reload();
+  }
 
   // کلیک روی "دریافت مجدد کد" (مرحله 2)
   resendCodeLink.addEventListener("click", (e) => {
     e.preventDefault();
+    generatedOtpCode();
     console.log(`درخواست مجدد کد برای شماره ${currentPhoneNumber}`);
     clearCodeInputs();
     submitCodeBtn.setAttribute("disabled", "true");
     startCountdown(); // شروع مجدد شمارش معکوس
     codeInputs[0].focus();
   });
+
+  function generatedOtpCode() {
+    // شبیه‌سازی تولید کد ۵ رقمی
+    generatedOtp = Math.floor(10000 + Math.random() * 89999).toString();
+    console.log(`کد تایید شبیه‌سازی شده: ${generatedOtp}`);
+    alert(`کد otp شماره ${currentPhoneNumber} : ${generatedOtp}`); // نمایش برای تست
+  }
 }
