@@ -160,7 +160,9 @@
 .code-input:focus {
   border: 2px solid var(--color-primary);
 }
-
+.code-input.error {
+  border: 1px solid var(--color-status-error);
+}
 .timer-and-edit-phone {
   display: flex;
   width: 344px;

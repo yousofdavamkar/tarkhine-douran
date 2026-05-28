@@ -118,6 +118,7 @@ export function initLoginModal() {
     submitCodeBtn.setAttribute("disabled", "true");
     stopCountdown();
     clearCodeInputs();
+    clearCodeInputsError();
     phoneInput.focus();
   }
 
@@ -135,6 +136,12 @@ export function initLoginModal() {
   //پاک کنندهکد وارد شده
   function clearCodeInputs() {
     codeInputs.forEach((input) => (input.value = ""));
+  }
+
+  function clearCodeInputsError() {
+    codeInputs.forEach((input) => {
+      input.classList.remove("error");
+    });
   }
 
   // open login modal
@@ -194,6 +201,7 @@ export function initLoginModal() {
   // مدیریت ورودی‌های کد (مرحله 2)
   codeInputs.forEach((input, index) => {
     input.addEventListener("input", (e) => {
+      clearCodeInputsError();
       e.target.value = e.target.value.replace(/[^0-9]/g, ""); // فقط اعداد مجاز
       if (e.target.value.length === 1 && index < codeInputs.length - 1) {
         codeInputs[index + 1].focus(); // پرش به ورودی بعدی
@@ -267,8 +275,12 @@ export function initLoginModal() {
       codeInputs.forEach((input) => (verificationCode += input.value));
 
       if (verificationCode !== generatedOtp) {
-        alert("کد وارد شده اشتباه است!");
+        codeInputs.forEach((input) => {
+          input.classList.add("error");
+        });
+
         clearCodeInputs();
+        alert("کد وارد شده اشتباه است!");
         return;
       }
 
@@ -354,6 +366,7 @@ export function initLoginModal() {
     generatedOtpCode();
     console.log(`درخواست مجدد کد برای شماره ${currentPhoneNumber}`);
     clearCodeInputs();
+    clearCodeInputsError();
     submitCodeBtn.setAttribute("disabled", "true");
     startCountdown(); // شروع مجدد شمارش معکوس
     codeInputs[0].focus();
