@@ -5,7 +5,7 @@ const usersApi = new ApiCall("users");
 export function initLoginModal() {
   if (document.getElementById("login-modal-overlay")) return;
 
-  const modalHTML = `
+  const modalHTML = /*HTML*/ `
 
     <div id="login-modal-overlay" class="modal-overlay hidden">
 

@@ -78,6 +78,25 @@
   pointer-events: initial;
 }
 
+.site-header__btn.active {
+  width: 58px;
+}
+
+.site-header__btn > .site-header__arrow-icon {
+  display: none;
+}
+.site-header__btn.active > .site-header__arrow-icon {
+  display: block;
+}
+
+.site-header__btn > .site-header__dropdown {
+  display: none;
+}
+
+.site-header__btn.active > .site-header__dropdown {
+  display: block;
+}
+
 @media (hover: none) and (pointer: coarse) {
   .site-header__nav-item:active > .site-header__dropdown,
   .site-header__btn:active > .site-header__dropdown,
