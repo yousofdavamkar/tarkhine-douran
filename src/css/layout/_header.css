@@ -85,6 +85,7 @@
 .site-header__btn > .site-header__arrow-icon {
   display: none;
 }
+
 .site-header__btn.active > .site-header__arrow-icon {
   display: block;
 }
@@ -95,6 +96,11 @@
 
 .site-header__btn.active > .site-header__dropdown {
   display: block;
+}
+
+.site-header__arrow-icon-arrowDown {
+  width: 16px;
+  height: 16px;
 }
 
 @media (hover: none) and (pointer: coarse) {
@@ -278,5 +284,12 @@
   }
   .site-header__nav-item {
     height: 34px;
+  }
+  .site-header__btn.active {
+    width: 34px;
+  }
+  .site-header__arrow-icon-arrowDown {
+    width: 8px;
+    height: 8px;
   }
 }

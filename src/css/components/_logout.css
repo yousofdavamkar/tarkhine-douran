@@ -92,3 +92,25 @@
   background: var(--color-status-error-extra-light);
   color: var(--color-status-error);
 }
+
+@media screen and (max-width: 48em) {
+  .Logout-modal-box {
+    width: 320px;
+    height: 175px;
+  }
+  .Logout-modal-box-header {
+    height: 57px;
+  }
+  .Logout-modal-box-header-title {
+    font-size: 14px;
+  }
+  .Logout-modal-box-body-text {
+    font-size: 12px;
+  }
+  .btn-cancel {
+    font-size: 12px;
+  }
+  .btn-exit {
+    font-size: 12px;
+  }
+}
