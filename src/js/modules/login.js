@@ -242,7 +242,6 @@ export function initLoginModal() {
   function startCountdown() {
     stopCountdown(); // اگر قبلاً تایمری در حال اجراست، متوقفش کن
     remainingTime = 119; // 1 دقیقه و 59 ثانیه
-    remainingTime = 10; // 1 دقیقه و 59 ثانیه
     timerTextShow.classList.remove("hidden");
     resendCodeLink.classList.add("hidden");
     updateCountdownDisplay();
@@ -376,6 +375,8 @@ export function initLoginModal() {
     // شبیه‌سازی تولید کد ۵ رقمی
     generatedOtp = Math.floor(10000 + Math.random() * 89999).toString();
     console.log(`کد تایید شبیه‌سازی شده: ${generatedOtp}`);
-    alert(`کد otp شماره ${currentPhoneNumber} : ${generatedOtp}`); // نمایش برای تست
+    alert(
+      `کد otp شماره ${currentPhoneNumber} : ${generatedOtp} (کد شما در کنسول چاپ شد.)`,
+    ); // نمایش برای تست
   }
 }

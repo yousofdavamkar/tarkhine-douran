@@ -5,7 +5,7 @@ async function loadAccordionData() {
   const endpoint = container?.dataset.endpoint;
 
   if (!container || !endpoint) {
-    console.warn("Accordion container or endpoint not found!");
+    // console.warn("Accordion container or endpoint not found!");
     return;
   }
 
