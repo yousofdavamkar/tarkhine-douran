@@ -3,22 +3,22 @@ export function initLogoutModal() {
 
   const modalHTML = /*HTML*/ `
     <div id="Logout-modal-overlay" class="Logout-modal-overlay hidden">
-        <div class="Logout-modal-box">
-            <div class="Logout-modal-box-header">
-                <div class="Logout-modal-box-header-placeHolder">
+        <div class="logout-modal__box">
+            <div class="logout-modal__header">
+                <div class="logout-modal__placeholder">
                 </div>
-                <p class="Logout-modal-box-header-title" >خروج</p>
-                <svg class="Logout-modal-box-header-close" id="logout-close-btn">
+                <p class="logout-modal__title" >خروج</p>
+                <svg class="logout-modal__close-icon" id="logout-close-btn">
                     <use xlink:href="/icons/sprite.svg#close"></use>
                 </svg>
             </div>
-            <div class="Logout-modal-box-body">
-                <p class="Logout-modal-box-body-text body-md">آیا مایل به خروج از حساب کاربری خود هستید؟</p>
-                <div class="Logout-modal-box-body-btn-layout">
-                    <button id="btn-cancel" class="Logout-modal-box-body-btn btn-cancel button-lg">
+            <div class="logout-modal__body">
+                <p class="logout-modal__text body-md">آیا مایل به خروج از حساب کاربری خود هستید؟</p>
+                <div class="logout-modal__actions">
+                    <button id="btn-cancel" class="logout-modal__btn btn-cancel button-lg">
                     بازگشت
                     </button>
-                     <button id="btn-exit" class="Logout-modal-box-body-btn btn-exit button-lg">
+                     <button id="btn-exit" class="logout-modal__btn btn-exit button-lg">
                      خروج
                     </button>
                 </div>
@@ -34,7 +34,7 @@ export function initLogoutModal() {
   const closeBtn = document.getElementById("logout-close-btn");
   const cancelBtn = document.getElementById("btn-cancel");
   const exitBtn = document.getElementById("btn-exit");
-  const headerLoginBtn = document.getElementById("header-login-btn");
+  const headerLoginBtn = document.getElementById("site-header__btn--login");
 
   // رویداد کلیک روی دکمه خروج
   if (logoutBtn) {

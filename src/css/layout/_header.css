@@ -98,7 +98,7 @@
   display: block;
 }
 
-.site-header__arrow-icon-arrowDown {
+.site-header__arrow-svg {
   width: 16px;
   height: 16px;
 }
@@ -288,7 +288,7 @@
   .site-header__btn.active {
     width: 34px;
   }
-  .site-header__arrow-icon-arrowDown {
+  .site-header__arrow-svg {
     width: 8px;
     height: 8px;
   }

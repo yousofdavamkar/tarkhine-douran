@@ -14,7 +14,7 @@ import { initLoginModal } from "/src/js/modules/login.js";
 import { initLogoutModal } from "./modules/logout";
 
 let isLoggedIn = false;
-const headerLoginBtn = document.getElementById("header-login-btn");
+const headerLoginBtn = document.getElementById("site-header__btn--login");
 const phoneElement = document.getElementById(
   "site-header__dropdown-link--phone",
 );

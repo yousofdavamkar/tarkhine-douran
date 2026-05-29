@@ -55,7 +55,7 @@
 }
 
 @media screen and (max-width: 48em) {
-  #header-login-btn .site-header__dropdown-item {
+  #site-header__btn--login .site-header__dropdown-item {
     font-size: 12px;
   }
 }
