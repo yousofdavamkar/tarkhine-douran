@@ -7,19 +7,6 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "/src/css/styles.css";
 
-
-const sliderEL = document.getElementById("menu");
-
-const menusCall = new ApiCall("/menus?isActive=true");
-
-const {
-  data: {
-    data: { items },
-  },
-} = await menusCall.get();
-
-
-
 const swiper1 = new Swiper(".mySwiper1", {
   modules: [Navigation, Pagination, Autoplay],
   spaceBetween: 0,
@@ -37,3 +24,20 @@ const swiper1 = new Swiper(".mySwiper1", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+try {
+  const sliderEL = document.getElementById("menu");
+  try {
+    const menusCall = new ApiCall("/menus?isActive=true");
+  } catch (error) {
+    console.log(error);
+  }
+
+  const {
+    data: {
+      data: { items },
+    },
+  } = await menusCall.get();
+} catch (error) {
+  console.log(error);
+}
